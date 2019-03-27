@@ -7,10 +7,21 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
+    "csurf": "^1.9.0",
     "debug": "~2.6.9",
     "express": "~4.16.0",
+    "helmet": "^3.16.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "nunjucks": "^3.2.0"
+  },
+  "autoload": {
+    "Routes": "app/Routes/",
+    "Library": "app/Library/",
+    "Public": "public/",
+    "Plugins": "plugins/",
+    "Resources": "resources/",
+    "App": "app/"
   }
 }
