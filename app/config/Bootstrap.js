@@ -1,27 +1,14 @@
-let base = process.cwd()
-let nameSpace = require(`${base}/package.json`)['autoload']
+const Core = require('./Core')
+Core.globalsDeclaration()
+
 
 /**
  * 
  */
-global.use = (pack, ...par) => {
-    for (let variable in nameSpace) {
-        if (pack.startsWith(variable + '/')) {
-            pack = pack.replace(
-                variable + '/', 
-                base +'/'+ nameSpace[variable]
-            )
-        }
-    }
-
-    if (par.length > 0) {
-        return require(pack)(...par);
-    } else {
-        return require(pack);
-    }
-}
-
-module.exports = (app, viewEnv) => {
+module.exports = (app) => {
     // TODO: Database Integration using Sequalize
-    use('App/Router')(app, viewEnv)
+    use('App/Router')(
+        app, 
+        Core.nunjucks(app)
+    )
 }
