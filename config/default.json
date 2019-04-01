@@ -1,0 +1,18 @@
+{
+    "PORT": 3000,
+    "DB": {
+        "host": "localhost",
+        "port": 5984,
+        "user": "root",
+        "password": "",
+        "dbName": "customers"
+    },
+    // Customer module configs
+    "Customer": {
+        "credit": {
+            "initialLimit": 100,
+            // Set low for development
+            "initialDays": 1
+        }
+    }
+}

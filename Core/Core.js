@@ -8,6 +8,11 @@ const nunjucks = require('nunjucks')
 class Core {
     static globalsDeclaration() {
         Core.useDeclaration()
+
+        // $config
+        global.$config = use('config')
+        global.$moment = use('moment')
+        global.$_ = use('lodash')
     }
 
     /**
