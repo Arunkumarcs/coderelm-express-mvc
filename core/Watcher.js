@@ -79,5 +79,6 @@ class watcher {
 // for (const iterator in watchObj) {
 //     console.log(iterator)
 // }
+// console.log(watchObj.constructor.name)
 
 module.exports = watcher
