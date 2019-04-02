@@ -56,8 +56,8 @@ class watcher {
 //     d3: "23qw3"
 // }
 
-// p1 = watchObj.createProxy(p1, "p1")
-// p2 = watchObj.createProxy(p2, "p2")
+// p1 = watchObj.proxy(p1, "p1")
+// p2 = watchObj.proxy(p2, "p2")
 
 // p1.d3 = "sadfsdf"
 // p2.d1 = "sadfsdf"
