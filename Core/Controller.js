@@ -17,7 +17,7 @@ class Controller
         }
 
         // set proxy obj
-        return new Proxy(this, proxyHandler);
+        // return new Proxy(this, proxyHandler);
     }
 
     /**
@@ -25,20 +25,20 @@ class Controller
      * @param {*} param0 
      * @param  {...any} par 
      */
-    do(
-        {
-            method,
-            before = (obj, method, ...pars) => {
-                obj[method](...pars)
-            }
-        }, ...par
-    ) {
-        if (this[method] === undefined) {
-            throw Error(`Undefined Method "${method}"`)
-        } else {
-            before(this, method, ...par)
-        }
-    }
+    // do(
+    //     {
+    //         method,
+    //         before = (obj, methods, ...pars) => {
+    //             obj[method](...pars)
+    //         }
+    //     }, ...par
+    // ) {
+    //     if (this[method] === undefined) {
+    //         throw Error(`Undefined Method "${method}"`)
+    //     } else {
+    //         before(this, method, ...par)
+    //     }
+    // }
 }
 
 module.exports = Controller

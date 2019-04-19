@@ -5,7 +5,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development node ./bin/www",
     "start-test": "cross-env NODE_ENV=test node ./bin/www",
-    "start-pro": "cross-env NODE_ENV=production node ./bin/www"
+    "start-pro": "cross-env NODE_ENV=production node ./bin/www",
+    "test": "./node_modules/.bin/mocha"
   },
   "dependencies": {
     "config": "^3.0.1",
@@ -31,5 +32,10 @@
     "Resources": "resources/",
     "App": "app/",
     "Core": "core/"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "supertest": "^4.0.2"
   }
 }
