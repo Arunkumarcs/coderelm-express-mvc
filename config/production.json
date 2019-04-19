@@ -1,5 +1,5 @@
 {
-    "PORT": 4000,
+    "PORT": 3000,
     "DB": {
         "host": "localhost",
         "port": 5984,
