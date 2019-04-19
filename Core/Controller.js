@@ -15,30 +15,7 @@ class Controller
             minuit: $moment().format('MM'),
             sec: $moment().format('SS')
         }
-
-        // set proxy obj
-        // return new Proxy(this, proxyHandler);
     }
-
-    /**
-     * 
-     * @param {*} param0 
-     * @param  {...any} par 
-     */
-    // do(
-    //     {
-    //         method,
-    //         before = (obj, methods, ...pars) => {
-    //             obj[method](...pars)
-    //         }
-    //     }, ...par
-    // ) {
-    //     if (this[method] === undefined) {
-    //         throw Error(`Undefined Method "${method}"`)
-    //     } else {
-    //         before(this, method, ...par)
-    //     }
-    // }
 }
 
 module.exports = Controller
