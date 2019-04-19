@@ -8,3 +8,5 @@ describe("homepage", function () {
             .expect(/title/, done)  
     })
 })
+
+// TODO: Test post request with mocha and chai
