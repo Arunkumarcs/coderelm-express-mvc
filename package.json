@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "express-debug": "^1.1.1",
     "mocha": "^6.1.4",
     "supertest": "^4.0.2"
   }

@@ -7,11 +7,9 @@ const logger = require('morgan');
 const app = express();
 
 // TODO: Express Session
-// TODO: Implement Express Debugger
-// expressDebug = require('express-debug');
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'resources/Views'));
 app.set('view engine', 'jade');
 
 // Logger

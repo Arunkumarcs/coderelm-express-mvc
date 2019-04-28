@@ -25,6 +25,11 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
+if($config.Debug === true) {
+  require('express-debug')(app, {
+    /* settings */
+  });
+}
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
