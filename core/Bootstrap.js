@@ -1,7 +1,6 @@
 const Core = require('./Core')
 Core.globalsDeclaration()
 
-
 /**
  * 
  */

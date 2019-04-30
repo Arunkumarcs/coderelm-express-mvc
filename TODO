@@ -1,12 +1,19 @@
-ARUN TODO:
+INITIAL TODO:
     ✔ Implement Express Debugger @started(19-04-28 20:53) @done(19-04-28 21:25) @lasted(32m21s)
     ☐ Implement Test Framework 
         ☐ Jest
-        ☐ Mocha
-    ☐ Express Session
+        ☐ Mocha 
+    ☐ Express Session 
+        ☐ Session Storage
     ☐ Implement DB setup 
         ☐ Sequalize
         ☐ Mongoose
+    ☐ API
+        ☐ GraphQL
+        ☐ AJAX
+
+FEATURE:
+    ☐ CLI Interface
 
 
     
