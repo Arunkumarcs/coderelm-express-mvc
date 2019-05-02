@@ -1,10 +1,10 @@
 INITIAL TODO:
     ✔ Implement Express Debugger @started(19-04-28 20:53) @done(19-04-28 21:25) @lasted(32m21s)
+    ✔ Express Session @started(19-05-02 08:41) @done(19-05-02 09:16) @lasted(35m16s)
+        ✔ Session Storage @started(19-05-02 08:51) @done(19-05-02 09:16)
     ☐ Implement Test Framework 
         ☐ Jest
         ☐ Mocha 
-    ☐ Express Session 
-        ☐ Session Storage
     ☐ Implement DB setup 
         ☐ Sequalize
         ☐ Mongoose
@@ -12,7 +12,7 @@ INITIAL TODO:
         ☐ GraphQL
         ☐ AJAX
 
-FEATURE:
+FEATURE TODO:
     ☐ CLI Interface
 
 

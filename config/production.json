@@ -15,5 +15,13 @@
             "initialDays": 1
         }
     },
-    "Debug": false
+    "Debug": false,
+    "Session": { 
+        "secret": "productionSessionKey", 
+        "resave": false, 
+        "saveUninitialized": true 
+    },
+    "SessionStorage": {
+
+    }
 }

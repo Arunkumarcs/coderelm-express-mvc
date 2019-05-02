@@ -15,5 +15,16 @@
             "initialDays": 1
         }
     },
-    "Debug": true
+    "Debug": true,
+    
+    // https://expressjs.com/en/resources/middleware/session.html
+    "Session": { 
+        "secret": "ersfbhesdzdbgnfgdgf", 
+        "resave": false, 
+        "saveUninitialized": true 
+    },
+    // https://www.npmjs.com/package/session-file-store
+    "SessionStorage": {
+
+    }
 }

@@ -1,6 +1,7 @@
 const base = process.cwd()
 const nameSpace = require(`${base}/package.json`)['autoload']
 const nunjucks = require('nunjucks')
+const session = require('express-session')
 
 /**
  * Core
@@ -13,6 +14,14 @@ class Core {
         global.$config = use('config')
         global.$moment = use('moment')
         global.$_ = use('lodash')
+        global.BASE_PATH = base
+    }
+
+    /**
+     * Session
+     */
+    static Session() {
+        return session
     }
 
     /**

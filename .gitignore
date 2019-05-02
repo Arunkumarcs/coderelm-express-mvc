@@ -1,5 +1,4 @@
 node_modules
 *.log
-Session
 yarn-error.log
 yarn.lock
