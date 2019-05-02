@@ -10,7 +10,9 @@
     "restart-pm2": "pm2 restart expCodeRelm",
     "stop-pm2": "pm2 stop expCodeRelm",
     "test": "./node_modules/.bin/mocha",
-    "testj": "./node_modules/.bin/mocha"
+    "testj": "./node_modules/.bin/mocha",
+    "assets-build": "./node_modules/.bin/webpack",
+    "assets-build-watch": "./node_modules/.bin/webpack --watch --mode development"
   },
   "dependencies": {
     "config": "^3.0.1",
@@ -48,6 +50,8 @@
     "jest": "^24.7.1",
     "mocha": "^6.1.4",
     "superagent": "^5.0.4",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
   }
 }
