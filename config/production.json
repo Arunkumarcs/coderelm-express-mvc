@@ -22,6 +22,6 @@
         "saveUninitialized": true 
     },
     "SessionStorage": {
-
+        "secret": "45tyhgbfdgu"
     }
 }
