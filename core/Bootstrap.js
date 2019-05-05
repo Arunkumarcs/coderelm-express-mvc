@@ -24,4 +24,8 @@ module.exports = (app) => {
         app, 
         Core.nunjucks(app)
     )
+    
+    return {
+        models: $models
+    }
 }

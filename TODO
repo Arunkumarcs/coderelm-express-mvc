@@ -1,18 +1,35 @@
-INITIAL TODO:
+DONE TODO:
     ✔ Implement Express Debugger @started(19-04-28 20:53) @done(19-04-28 21:25) @lasted(32m21s)
     ✔ Express Session @started(19-05-02 08:41) @done(19-05-02 09:16) @lasted(35m16s)
-        ✔ Session Storage @started(19-05-02 08:51) @done(19-05-02 09:16)
+        ✔ Implement Session Storage @started(19-05-02 08:51) @done(19-05-02 09:16)
+        ✔ Check Session Storage @started(19-05-04 15:52) @done(19-05-04 15:58) @lasted(6m59s)
+
+ARUN TODO:
     ☐ Implement DB setup 
-        ☐ Sequalize
+        ✔ Sequalize @started(19-05-04 18:02) @done(19-05-05 10:18) @lasted(16h16m48s)
+            ☐ Samples For Migrations
+            ☐ Samples For Model    
+            ☐ Samples For Seeders    
         ☐ Mongoose
+
+FEATURE HOLD:
+    ☐ Implement Security NPM's
+    ☐ Implement Socket
+    ☐ Assets Manager
+        ☐ ES6    
+        ☐ React 
+        ☐ Vue 
+        ☐ Angular 
     ☐ Implement Test Framework 
         ☐ Jest
         ☐ Mocha 
-
-FEATURE TODO:
     ☐ API
         ☐ GraphQL
         ☐ AJAX
+    ☐ Server Side Rendering
+        ☐ React Nex 
+        ☐ Vue Nuxt 
+        ☐ Angular SSR    
     ☐ CLI Interface
 
 

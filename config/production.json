@@ -1,11 +1,16 @@
 {
     "PORT": 3000,
     "DB": {
-        "host": "localhost",
-        "port": 5984,
-        "user": "root",
+        "username": "root",
         "password": "",
-        "dbName": "customers"
+        "database": "express_mvc",
+        "host": "127.0.0.1",
+        "dialect": "mysql",
+        "pool": {
+            "max": 5,
+            "min": 0,
+            "idle": 10000
+        }
     },
     // Customer module configs
     "Customer": {
@@ -22,6 +27,6 @@
         "saveUninitialized": true 
     },
     "SessionStorage": {
-
+        "secret": "45tyhgbfdgu"
     }
 }
