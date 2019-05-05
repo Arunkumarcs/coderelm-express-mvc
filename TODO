@@ -6,14 +6,17 @@ DONE TODO:
 
 ARUN TODO:
     ☐ Implement DB setup 
-        ☐ Sequalize @started(19-05-04 18:02)
+        ✔ Sequalize @started(19-05-04 18:02) @done(19-05-05 10:18) @lasted(16h16m48s)
+            ☐ Samples For Migrations
+            ☐ Samples For Model    
+            ☐ Samples For Seeders    
         ☐ Mongoose
 
 FEATURE HOLD:
     ☐ Implement Security NPM's
     ☐ Implement Socket
     ☐ Assets Manager
-        ☐ ES6 
+        ☐ ES6    
         ☐ React 
         ☐ Vue 
         ☐ Angular 

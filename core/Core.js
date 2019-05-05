@@ -11,10 +11,11 @@ class Core {
         Core.useDeclaration()
 
         // $config
+        global.BASE_PATH = base
         global.$config = use('config')
         global.$moment = use('moment')
         global.$_ = use('lodash')
-        global.BASE_PATH = base
+        global.$models = use("Db/models");
     }
 
     /**
