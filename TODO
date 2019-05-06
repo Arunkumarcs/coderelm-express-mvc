@@ -9,10 +9,18 @@ ARUN TODO:
         ✔ Sequalize @started(19-05-04 18:02) @done(19-05-05 10:18) @lasted(16h16m48s)
             ☐ Samples For Migrations
             ☐ Samples For Model    
-            ☐ Samples For Seeders    
+            ☐ Samples For Seeders
         ☐ Mongoose
 
+GAYATHRI TODO:
+    
+
 FEATURE HOLD:
+    ☐ Yeoman - https://yeoman.io/generators/
+    ☐ Commander Line Interface
+        ☐ commander-mvc https://commander-mvc.github.io/commander-mvc/getting-started.html
+        ☐ Commander, chalk - https://medium.freecodecamp.org/writing-command-line-applications-in-nodejs-2cf8327eee2
+    ☐ Commander NPM
     ☐ Implement Security NPM's
     ☐ Implement Socket
     ☐ Assets Manager
