@@ -18,8 +18,9 @@ GAYATHRI TODO:
 FEATURE HOLD:
     ☐ Yeoman - https://yeoman.io/generators/
     ☐ Commander Line Interface
+        ☐ vorpal - https://vorpal.js.org/
         ☐ commander-mvc https://commander-mvc.github.io/commander-mvc/getting-started.html
-        ☐ Commander, chalk - https://medium.freecodecamp.org/writing-command-line-applications-in-nodejs-2cf8327eee2
+        ☐ commander inquirer colors - https://itnext.io/making-cli-app-with-ease-using-commander-js-and-inquirer-js-f3bbd52977ac
     ☐ Commander NPM
     ☐ Implement Security NPM's
     ☐ Implement Socket
