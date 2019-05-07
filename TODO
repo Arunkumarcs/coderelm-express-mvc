@@ -9,9 +9,18 @@ ARUN TODO:
         ✔ Sequalize @started(19-05-04 18:02) @done(19-05-05 10:18) @lasted(16h16m48s)
             ✔ Samples For Migrations @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(31s)
             ✔ Samples For Seeders @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(35s)
-            ☐ Samples For Model    
-        ☐ Mongoosep 
+            ☐ Samples For Model
+        ☐ Mongoose
+
+GAYATHRI TODO:
+    
 FEATURE HOLD:
+    ☐ Yeoman - https://yeoman.io/generators/
+    ☐ Commander Line Interface
+        ☐ vorpal - https://vorpal.js.org/
+        ☐ commander-mvc https://commander-mvc.github.io/commander-mvc/getting-started.html
+        ☐ commander inquirer colors - https://itnext.io/making-cli-app-with-ease-using-commander-js-and-inquirer-js-f3bbd52977ac
+    ☐ Commander NPM
     ☐ Implement Security NPM's
     ☐ Implement Socket
     ☐ Assets Manager
