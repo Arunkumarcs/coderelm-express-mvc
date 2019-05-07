@@ -22,6 +22,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "express-session": "^1.16.1",
+    "faker": "^4.1.0",
     "helmet": "^3.16.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
@@ -44,7 +45,8 @@
     "Resources": "resources/",
     "App": "app/",
     "Core": "core/",
-    "Db": "db/"
+    "Db": "db/",
+    "Model": "app/Model/"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

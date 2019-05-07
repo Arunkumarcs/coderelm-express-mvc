@@ -7,11 +7,10 @@ DONE TODO:
 ARUN TODO:
     ☐ Implement DB setup 
         ✔ Sequalize @started(19-05-04 18:02) @done(19-05-05 10:18) @lasted(16h16m48s)
-            ☐ Samples For Migrations
+            ✔ Samples For Migrations @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(31s)
+            ✔ Samples For Seeders @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(35s)
             ☐ Samples For Model    
-            ☐ Samples For Seeders    
-        ☐ Mongoose
-
+        ☐ Mongoosep 
 FEATURE HOLD:
     ☐ Implement Security NPM's
     ☐ Implement Socket
