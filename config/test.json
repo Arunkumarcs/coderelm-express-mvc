@@ -2,7 +2,7 @@
     "PORT": 3000,
     "Debug": false,
     "Session": { 
-        "secret": "productionSessionKey", 
+        "secret": "testsecretKey", 
         "resave": false, 
         "saveUninitialized": true 
     },
