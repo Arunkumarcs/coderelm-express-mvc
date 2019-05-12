@@ -5,13 +5,11 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     createdAt: {
       allowNull: false,
-      type: DataTypes.DATE,
-      defaultValue: "pending",
+      type: DataTypes.DATE
     },
     updatedAt: {
       allowNull: false,
-      type: DataTypes.DATE,
-      defaultValue: "pending",
+      type: DataTypes.DATE
     },
     id:{ 
       type: DataTypes.BIGINT,
