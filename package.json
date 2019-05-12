@@ -19,6 +19,7 @@
     "assets-build-watch": "./node_modules/.bin/webpack --watch --mode development"
   },
   "dependencies": {
+    "@arunkumarcoderelm/use": "^1.0.1",
     "config": "^3.0.1",
     "cookie-parser": "~1.4.3",
     "cross-env": "^5.2.0",
