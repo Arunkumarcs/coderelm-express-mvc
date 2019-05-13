@@ -3,6 +3,7 @@ DONE TODO:
     ✔ Express Session @started(19-05-02 08:41) @done(19-05-02 09:16) @lasted(35m16s)
         ✔ Implement Session Storage @started(19-05-02 08:51) @done(19-05-02 09:16)
         ✔ Check Session Storage @started(19-05-04 15:52) @done(19-05-04 15:58) @lasted(6m59s)
+    ✔ Yeoman - https://yeoman.io/generators/ @started(19-05-6 07:18) @done(19-05-13 07:19) @lasted(1w1m24s)
 
 ARUN TODO:
     ☐ Implement DB setup 
@@ -10,7 +11,12 @@ ARUN TODO:
             ✔ Samples For Migrations @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(31s)
             ✔ Samples For Seeders @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(35s)
             ☐ Samples For Model
-        ☐ Mongoose
+        ☐ Mongose
+    ☐ Assets Manager
+        ✔ ES6 - https://github.com/wbkd/webpack-starter @started(19-05-13 07:21) @done(19-05-13 08:15) @lasted(54m7s)
+        ☐ React 
+        ☐ Vue 
+        ☐ Angular 
 
 GAYATHRI TODO:
     ☐ Check Yeoman & commander NPM
@@ -19,19 +25,13 @@ KESAVAN TODO:
     ☐ Check Yeoman & commander NPM
 
 FEATURE HOLD:
-    ☐ Yeoman - https://yeoman.io/generators/
     ☐ Commander Line Interface
         ☐ vorpal - https://vorpal.js.org/
         ☐ commander-mvc https://commander-mvc.github.io/commander-mvc/getting-started.html
         ☐ commander inquirer colors - https://itnext.io/making-cli-app-with-ease-using-commander-js-and-inquirer-js-f3bbd52977ac
-    ☐ Commander NPM
+        ☐ Commander NPM
     ☐ Implement Security NPM's
     ☐ Implement Socket
-    ☐ Assets Manager
-        ☐ ES6    
-        ☐ React 
-        ☐ Vue 
-        ☐ Angular 
     ☐ Implement Test Framework 
         ☐ Jest
         ☐ Mocha 
