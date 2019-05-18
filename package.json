@@ -42,9 +42,12 @@
     "session-file-store": "^1.2.0"
   },
   "keywords": [
-    "Express MVC",
-    "Nunjucks",
-    "Sequelize"
+    "MVC",
+    "nunjucks",
+    "sequelize",
+    "express",
+    "expressjs",
+    "es6"
   ],
   "autoload": {
     "Routes": "app/Routes/",
