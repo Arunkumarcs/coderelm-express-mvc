@@ -41,6 +41,11 @@
     "sequelize-cli": "^5.4.0",
     "session-file-store": "^1.2.0"
   },
+  "keywords": [
+    "Express MVC",
+    "Nunjucks",
+    "Sequelize"
+  ],
   "autoload": {
     "Routes": "app/Routes/",
     "Library": "app/Library/",
@@ -60,8 +65,6 @@
     "jest": "^24.7.1",
     "mocha": "^6.1.4",
     "superagent": "^5.0.4",
-    "supertest": "^4.0.2",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1"
+    "supertest": "^4.0.2"
   }
 }
