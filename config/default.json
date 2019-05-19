@@ -8,7 +8,7 @@
             "initialDays": 1
         }
     },
-    "Debug": true,
+    "Debug": false,
     
     // https://expressjs.com/en/resources/middleware/session.html
     "Session": { 

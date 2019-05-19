@@ -1,7 +1,2 @@
-# Arun TODO:
-
-- [x] Do this 
-
-mysql2
-https://github.com/sequelize/cli
-http://docs.sequelizejs.com/manual/getting-started.html
+# generator-coderelm-express-mvc 
+> Express MVC structure integrated with Sequalize ORM and Nunjucks template engine from Coderelm.

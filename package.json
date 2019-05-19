@@ -13,8 +13,7 @@
     "strat-pm2": "pm2 start",
     "restart-pm2": "pm2 restart expCodeRelm",
     "stop-pm2": "pm2 stop expCodeRelm",
-    "test": "./node_modules/.bin/mocha",
-    "testj": "./node_modules/.bin/mocha",
+    "test": "./node_modules/.bin/jest",
     "assets-build": "cd resources/Assets && yarn build"
   },
   "dependencies": {
@@ -61,13 +60,8 @@
     "Model": "app/Model/"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "chai": "^4.2.0",
     "express-debug": "^1.1.1",
     "jest": "^24.7.1",
-    "mocha": "^6.1.4",
-    "superagent": "^5.0.4",
-    "supertest": "^4.0.2"
+    "puppeteer": "^1.16.0"
   }
 }

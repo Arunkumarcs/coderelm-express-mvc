@@ -4,6 +4,8 @@ DONE TODO:
         ✔ Implement Session Storage @started(19-05-02 08:51) @done(19-05-02 09:16)
         ✔ Check Session Storage @started(19-05-04 15:52) @done(19-05-04 15:58) @lasted(6m59s)
     ✔ Yeoman - https://yeoman.io/generators/ @started(19-05-6 07:18) @done(19-05-13 07:19) @lasted(1w1m24s)
+    ✔ Implement Test Framework @started(19-05-18 11:10) @done(19-05-18 21:24) @lasted(10h14m16s)
+        ✔ Jest & puppeteer @started(19-05-18 11:10) @done(19-05-18 21:23) @lasted(10h13m51s)
 
 ARUN TODO:
     ☐ Implement DB setup 
@@ -16,7 +18,7 @@ ARUN TODO:
         ✔ ES6 - https://github.com/wbkd/webpack-starter @started(19-05-13 07:21) @done(19-05-13 08:15) @lasted(54m7s)
         ☐ React 
         ☐ Vue 
-        ☐ Angular 
+        ☐ Angular
 
 GAYATHRI TODO:
     ☐ Check Yeoman & commander NPM
@@ -32,17 +34,13 @@ FEATURE HOLD:
         ☐ Commander NPM
     ☐ Implement Security NPM's
     ☐ Implement Socket
-    ☐ Implement Test Framework 
-        ☐ Jest
-        ☐ Mocha 
     ☐ API
         ☐ GraphQL
         ☐ AJAX
     ☐ Server Side Rendering
         ☐ React Nex 
         ☐ Vue Nuxt 
-        ☐ Angular SSR    
-    ☐ CLI Interface
+        ☐ Angular SSR
 
 
     
