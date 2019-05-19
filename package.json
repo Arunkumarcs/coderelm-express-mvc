@@ -1,7 +1,7 @@
 {
   "name": "ak-express",
   "version": "1.0.0",
-  "description": "Express MVC with sequalize and ssr",
+  "description": "Superchaged Express Generator with Express MVC structure integrated with Sequalize ORM and Nunjucks template engine from Coderelm.Jest and Puppeteer test framework integrated.",
   "main": "./bin/www",
   "repository": "https://github.com/Arunkumarcs/express-mvc.git",
   "author": "Arunkumar <arunkumarcoderelm@gmail.com>",
