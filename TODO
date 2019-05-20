@@ -8,23 +8,26 @@ DONE TODO:
         ✔ Jest & puppeteer @started(19-05-18 11:10) @done(19-05-18 21:23) @lasted(10h13m51s)
 
 ARUN TODO:
-    ☐ Implement DB setup 
+    ☐ Implement DB setup @started(19-05-04 18:02) 
         ✔ Sequalize @started(19-05-04 18:02) @done(19-05-05 10:18) @lasted(16h16m48s)
             ✔ Samples For Migrations @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(31s)
             ✔ Samples For Seeders @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(35s)
             ☐ Samples For Model
         ☐ Mongose
-    ☐ Assets Manager
+    ☐ Assets Manager @started(19-05-13 07:21)
         ✔ ES6 - https://github.com/wbkd/webpack-starter @started(19-05-13 07:21) @done(19-05-13 08:15) @lasted(54m7s)
         ☐ React 
         ☐ Vue 
         ☐ Angular
 
 GAYATHRI TODO:
-    ☐ Check Yeoman & commander NPM
+    ☐ API
+        ☐ GraphQL
+        ☐ AJAX
 
 KESAVAN TODO:
-    ☐ Check Yeoman & commander NPM
+    ☐ Implement Socket
+    ☐ Implement Security NPM's
 
 FEATURE HOLD:
     ☐ Commander Line Interface
@@ -32,11 +35,6 @@ FEATURE HOLD:
         ☐ commander-mvc https://commander-mvc.github.io/commander-mvc/getting-started.html
         ☐ commander inquirer colors - https://itnext.io/making-cli-app-with-ease-using-commander-js-and-inquirer-js-f3bbd52977ac
         ☐ Commander NPM
-    ☐ Implement Security NPM's
-    ☐ Implement Socket
-    ☐ API
-        ☐ GraphQL
-        ☐ AJAX
     ☐ Server Side Rendering
         ☐ React Nex 
         ☐ Vue Nuxt 

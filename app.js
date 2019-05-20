@@ -14,16 +14,15 @@ app.set('view engine', 'jade');
 
 // Logger
 // app.use(logger('common', {
-//   stream: fs.createWriteStream('./resources/Log/access.log', { flags: 'a' })
+//   stream: fs.createWriteStream('./temp/Log/access.log', { flags: 'a' })
 // }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Bootstrapping 
-var {models} = require('./core/Bootstrap')(app)
+var {models} = require('./app/Core/Bootstrap')(app, express)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

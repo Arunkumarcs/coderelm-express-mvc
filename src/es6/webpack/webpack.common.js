@@ -12,6 +12,7 @@ module.exports = {
   },
   output: {
     path: Path.join(__dirname, '../../../public/build'),
+    // path: Path.join(__dirname, '../../../public'),
     filename: 'js/[name].js'
   },
   optimization: {

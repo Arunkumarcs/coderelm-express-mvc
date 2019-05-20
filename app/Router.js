@@ -9,7 +9,6 @@ const indexRouter = use('Routes/index');
 const usersRouter = use('Routes/users');
 
 module.exports = (app, viewEnv) => {
-    // Middleware
     app.use((req, res, next) => {
         // console.log("\n****************************************************\n");
         // console.log(req.body);
@@ -18,20 +17,23 @@ module.exports = (app, viewEnv) => {
         // console.log(req.originalUrl);
         Promise.reject().catch(next);
     });
+
+    // Security Middleware
     app.use(helmet());
     
-    /**
-     * API ROUTES
-     */
+    // API Routes
     // app.use('/api/', api);
+
     // TODO: FIix csurf Plugin
     // app.use(csurf());
+
+    // Nunjuck Middleware
     app.use((req, res, next) => {
         use('Library/Nunjuck', viewEnv, req, res)
         next()
     })
 
-
+    // Application Routes
     app.use('/', indexRouter);
     app.use('/users', usersRouter);
 }
