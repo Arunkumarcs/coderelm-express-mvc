@@ -1,5 +1,3 @@
 # coderelm-express-mvc 
-> Supercharged Express Generator with Express MVC structure integrated with Sequalize ORM and Nunjucks template engine along with Jest and Puppeteer test framework integrated from Coderelm Team.
 
-
-
+> Supercharged Express Generator with [Express MVC](https://github.com/Arunkumarcs/coderelm-express-mvc) structure integrated with [Sequalize ORM](http://docs.sequelizejs.com/) and [Nunjucks template engine](https://mozilla.github.io/nunjucks/) along with [Jest](https://jestjs.io/) and [Puppeteer](https://github.com/GoogleChrome/puppeteer) test framework integrated from Coderelm Team.
