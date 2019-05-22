@@ -27,8 +27,8 @@ test('adds 1 + 2 to equal 3', () => {
  */
 test('testing browser', async() => {
     const browser = await puppeteer.launch(config.puppeteer.launch);
-    const page = await b
-     rowser.newPage();
+    const page = await 
+    browser.newPage();
     await page.goto(config.url);
     let content = await page.content();
     // await page.screenshot({path: './test/screenshot/example.png'});
