@@ -1,7 +1,7 @@
 {
-  "name": "ak-express",
+  "name": "coderelm-express-mvc",
   "version": "1.1.0",
-  "description": "Supercharged Express Generator with Express MVC structure integrated with Sequalize ORM and Nunjucks template engine from Coderelm.Jest and Puppeteer test framework integrated.",
+  "description": "Supercharged Express Generator with Express MVC structure integrated with Sequalize ORM and Nunjucks template engine along with Jest and Puppeteer test framework integrated from Coderelm Team.",
   "main": "./bin/www",
   "repository": "https://github.com/Arunkumarcs/express-mvc.git",
   "author": "Arunkumar <arunkumarcoderelm@gmail.com>",
