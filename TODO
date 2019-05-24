@@ -35,6 +35,8 @@ FEATURE HOLD:
         ☐ commander-mvc https://commander-mvc.github.io/commander-mvc/getting-started.html
         ☐ commander inquirer colors - https://itnext.io/making-cli-app-with-ease-using-commander-js-and-inquirer-js-f3bbd52977ac
         ☐ Commander NPM
+        ☐ Enquirer - https://www.npmjs.com/package/enquirer
+        ☐ node-notifier - https://www.npmjs.com/package/node-notifier
     ☐ Server Side Rendering
         ☐ React Nex 
         ☐ Vue Nuxt 
