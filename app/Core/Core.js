@@ -29,6 +29,12 @@ class Core {
             }
         );
     }
+
+    static loadProviders(app, express) {
+        use('Provider/Public', app, express);
+        use('Provider/Session', app, express);
+        use('Provider/Router', app, express);
+    }
 }
 
 module.exports = Core;
