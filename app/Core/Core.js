@@ -37,8 +37,25 @@ class Core {
      */
     static loadProviders(app, express) {
         let Providers = use('Config/Providers.json');
+
+        // Initialize
+        Providers = $_.map(Providers, (item) => {
+            let providerClass = use(item);
+            return new providerClass(app, express);
+        });
+        
+        // boot
         $_.map(Providers, (item) => {
-            use(item, app, express);
+            if(typeof item.boot === 'function') {
+                item.boot();
+            }
+        });
+
+        // end
+        $_.map(Providers, (item) => {
+            if(typeof item.end === 'function') {
+                item.end();
+            }
         });
     }
 }

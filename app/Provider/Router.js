@@ -1,8 +1,15 @@
 const Core = use('Core/Core');
+const Provider = use('Core/Provider');
 
-module.exports = (app, express) => {
-    use('App/Router')(
-        app, 
-        Core.nunjucks(app)
-    );
-};   
+class Router extends Provider {
+    boot() {
+        use('App/Router')(
+            this.app, 
+            Core.nunjucks(this.app)
+        );
+    }
+    
+    end() { }
+}
+    
+module.exports = Router;   
