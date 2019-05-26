@@ -1,7 +1,6 @@
 require('@arunkumarcoderelm/use')
-const base = process.cwd()
-const nunjucks = use('nunjucks')
-const session = use('express-session')
+const base = process.cwd();
+const nunjucks = use('nunjucks');
 
 /**
  * Core
@@ -9,18 +8,11 @@ const session = use('express-session')
 class Core {
     static globalsDeclaration() {
         // $config
-        global.BASE_PATH = base
-        global.$config = use('config')
-        global.$moment = use('moment')
-        global.$_ = use('lodash')
-        global.$models = use("Db/models");
-    }
-
-    /**
-     * Session
-     */
-    static Session() {
-        return session
+        global.BASE_PATH = base;
+        global.$_        = use('lodash');
+        global.$config   = use('config');
+        global.$moment   = use('moment');
+        global.$models   = use("Db/models");
     }
 
     /**
@@ -29,13 +21,20 @@ class Core {
      */
     static nunjucks(app) {
         return nunjucks.configure(
-            `${base}/resources/Views`, {
+            `${base}/resources/Views`, 
+            {
                 autoescape: true,
                 express: app,
                 watch: true
             }
-        )
+        );
+    }
+
+    static loadProviders(app, express) {
+        use('Provider/Public', app, express);
+        use('Provider/Session', app, express);
+        use('Provider/Router', app, express);
     }
 }
 
-module.exports = Core
+module.exports = Core;

@@ -29,9 +29,9 @@ module.exports = (app, viewEnv) => {
 
     // Nunjuck Middleware
     app.use((req, res, next) => {
-        use('Library/Nunjuck', viewEnv, req, res)
-        next()
-    })
+        use('Library/Nunjuck', viewEnv, req, res);
+        next();
+    });
 
     // Application Routes
     app.use('/', indexRouter);
