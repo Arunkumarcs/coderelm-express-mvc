@@ -30,10 +30,16 @@ class Core {
         );
     }
 
+    /**
+     * 
+     * @param {*} app 
+     * @param {*} express 
+     */
     static loadProviders(app, express) {
-        use('Provider/Public', app, express);
-        use('Provider/Session', app, express);
-        use('Provider/Router', app, express);
+        let Providers = use('Config/Providers.json');
+        $_.map(Providers, (item) => {
+            use(item, app, express);
+        });
     }
 }
 

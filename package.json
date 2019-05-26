@@ -59,6 +59,7 @@
     "Routes": "app/Routes/",
     "Socket": "app/Socket/",
     "Provider": "app/Provider/",
+    "Config": "app/Config/",
     "App": "app/",
     "Public": "public/",
     "Resources": "resources/",
