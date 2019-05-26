@@ -1,0 +1,23 @@
+{
+    "PORT": 3000,
+    // Customer module configs
+    "Customer": {
+        "credit": {
+            "initialLimit": 100,
+            // Set low for development
+            "initialDays": 1
+        }
+    },
+    "Debug": false,
+    
+    // https://expressjs.com/en/resources/middleware/session.html
+    "Session": { 
+        "secret": "ersfbhesdzdbgnfgdgf", 
+        "resave": false, 
+        "saveUninitialized": true 
+    },
+    // https://www.npmjs.com/package/session-file-store
+    "SessionStorage": {
+        "secret": "5475687bcv"
+    }
+}

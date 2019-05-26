@@ -1,8 +1,8 @@
-const proxyHandler = use('Core/ProxyHandler')
+const proxyHandler = use('Core/ProxyHandler');
 
 class Controller {
     constructor() {
-        this.$theme = null
+        this.$theme = null;
         this.$time = {
             format: $moment().format('YYYY-MM-DD HH:MM:SS'),
             unix: $moment().unix(),
@@ -12,7 +12,7 @@ class Controller {
             hour: $moment().format('HH'),
             minuit: $moment().format('MM'),
             sec: $moment().format('SS')
-        }
+        };
     }
 
     /**
@@ -53,8 +53,8 @@ class Controller {
      */
     renderJson(obj)
     {
-        res.json(obj)
+        res.json(obj);
     }
 }
 
-module.exports = Controller
+module.exports = Controller;

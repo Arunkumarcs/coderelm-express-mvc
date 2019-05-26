@@ -58,6 +58,7 @@
     "Plugins": "app/plugins/",
     "Routes": "app/Routes/",
     "Socket": "app/Socket/",
+    "Provider": "app/Provider/",
     "App": "app/",
     "Public": "public/",
     "Resources": "resources/",

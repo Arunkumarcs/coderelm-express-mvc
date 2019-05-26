@@ -1,0 +1,12 @@
+{
+    "PORT": 3000,
+    "Debug": false,
+    "Session": { 
+        "secret": "testsecretKey", 
+        "resave": false, 
+        "saveUninitialized": true 
+    },
+    "SessionStorage": {
+        "secret": "45tyhgbfdgu"
+    }
+}
