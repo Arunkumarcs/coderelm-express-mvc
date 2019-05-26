@@ -53,7 +53,7 @@
     "Core": "app/Core/",
     "Event": "app/Event/",
     "Library": "app/Library/",
-    "Middelware": "app/Middelware/",
+    "Middleware": "app/Middleware/",
     "Model": "app/Model/",
     "Plugins": "app/plugins/",
     "Routes": "app/Routes/",

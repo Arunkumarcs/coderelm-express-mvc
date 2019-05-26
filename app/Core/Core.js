@@ -58,6 +58,25 @@ class Core {
             }
         });
     }
+
+    /**
+     * 
+     * @param {*} app 
+     * @param {*} express 
+     */
+    static loadMiddleware(app, viewEnv) {
+        let middleware = use('Config/Middleware.json');
+
+        // Initialize
+        $_.map(middleware, (item) => {
+            let middlewareClass = use(item);
+            let middlewareobj = new middlewareClass(app, viewEnv);
+            
+            if(typeof middlewareobj.boot === 'function') {
+                middlewareobj.boot();
+            }
+        });
+    }
 }
 
 module.exports = Core;
