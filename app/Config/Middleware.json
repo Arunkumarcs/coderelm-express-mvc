@@ -1,4 +1,5 @@
 [
     "Middleware/Security",
+    "Middleware/Api",
     "Middleware/Nunjuck"
 ]
