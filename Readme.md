@@ -2,7 +2,7 @@
 
 > Supercharged Express Generator with below features
 
-* [Express MVC](https://github.com/Arunkumarcs/coderelm-express-mvc)
+* [Express Js](https://expressjs.com/) with MVC code base.
 * [Sequalize ORM](http://docs.sequelizejs.com/)
 * [Nunjucks template engine](https://mozilla.github.io/nunjucks/) 
 * Testing framework [Jest](https://jestjs.io/) and [Puppeteer](https://github.com/GoogleChrome/puppeteer)
