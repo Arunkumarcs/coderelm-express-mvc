@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Bootstrapping 
-var {models} = require('./app/Core/Bootstrap')(app, express)
+var {models} = require('./core/Bootstrap')(app, express)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

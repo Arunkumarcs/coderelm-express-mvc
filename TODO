@@ -19,17 +19,13 @@ ARUN TODO:
         ☐ React 
         ☐ Vue 
         ☐ Angular
-
-GAYATHRI TODO:
-    ☐ API
-        ☐ GraphQL
+    ☐ API @started(19-05-29 08:35)
+        ✔ GraphQL @started(19-05-29 08:35) @done(19-05-29 08:35) @lasted(52s)
+            ☐ Authendication 
+            ☐ Subscription
         ☐ AJAX
 
-KESAVAN TODO:
-    ☐ Implement Socket
-    ☐ Implement Security NPM's
-
-FEATURE HOLD:
+GAYATHRI TODO:
     ☐ Commander Line Interface
         ☐ vorpal - https://vorpal.js.org/
         ☐ commander-mvc https://commander-mvc.github.io/commander-mvc/getting-started.html
@@ -37,6 +33,12 @@ FEATURE HOLD:
         ☐ Commander NPM
         ☐ Enquirer - https://www.npmjs.com/package/enquirer
         ☐ node-notifier - https://www.npmjs.com/package/node-notifier
+
+KESAVAN TODO:
+    ☐ Implement Socket
+    ☐ Implement Security NPM's
+
+FEATURE HOLD:
     ☐ Server Side Rendering
         ☐ React Nex 
         ☐ Vue Nuxt 
