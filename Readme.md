@@ -25,3 +25,9 @@ url
 ```bash
 http://localhost:3000/api/
 ```
+
+GraphQl schema and resolver can be found in below folder path in your project.
+
+```bash
+plugins/GraphQl
+```
