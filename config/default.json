@@ -1,5 +1,6 @@
 {
-    "Port": 4000,
+    "port": 4000,
     "debug": true,
-    "assets": "es6"
+    // react, vue, es6 
+    "assets": "" 
 }
