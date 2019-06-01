@@ -1,6 +1,6 @@
 module.exports = [
-    "Provider/Db",
     "Provider/Public",
+    "Provider/Db",
     "Provider/Session",
     "Provider/Router"
 ];

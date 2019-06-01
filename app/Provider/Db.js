@@ -7,7 +7,7 @@ class Db extends Provider {
             case "mongoose":
                 // mongoose
                 break;
-        
+                
             default:
                 // sequelize: mysql or postgress
                 global.$models = use("Db/models");       

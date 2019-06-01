@@ -22,10 +22,16 @@ router.get('/', async (req, res, next) => {
 // Single Page Application
 switch (config.assets) {
 	case 'es6':
-	case 'vue':
 		/* GET home page. */
 		router.all('/*',function(req,res){
 			res.sendFile(BASE_PATH+'/public/build/index.html');
+			res.end();
+		});	    
+		break;
+	case 'vue':
+		/* GET home page. */
+		router.all('/*',function(req,res){
+			res.sendFile(BASE_PATH+'/public/vue-build/index.html');
 			res.end();
 		});	    
 		break;

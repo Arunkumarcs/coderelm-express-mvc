@@ -12,10 +12,14 @@ class Public extends Provider {
                 );     
                 break;
             case 'es6':
-            case 'vue':
                 this.app.use(
                     this.express.static(BASE_PATH+'/public/build')
                 );     
+                break;
+            case 'vue':
+                this.app.use(
+                    this.express.static(BASE_PATH+'/public/vue-build')
+                );    
                 break;
             default:
                 this.app.use(
