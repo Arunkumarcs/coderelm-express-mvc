@@ -9,6 +9,6 @@ module.exports = (app, viewEnv) => {
     Core.loadMiddleware(app, viewEnv);
 
     // Application Routes
-    app.use('/', indexRouter);
     app.use('/users', usersRouter);
+    app.use('/', indexRouter);
 }

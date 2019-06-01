@@ -6,8 +6,6 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const app = express();
 
-// TODO: Express Session
-
 // view engine setup
 app.set('views', path.join(__dirname, 'resources/Views'));
 app.set('view engine', 'jade');

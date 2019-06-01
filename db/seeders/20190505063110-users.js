@@ -15,14 +15,14 @@ module.exports = {
     */
     let users = []
 
-    for (let index = 0; index < 5000; index++) {
+    for (let index = 0; index < 5; index++) {
       users.push({
         name: faker.internet.userName(),
         password: faker.internet.password(),
         email: faker.internet.email()
       })
     }
-
+    // console.log(users)
     return queryInterface.bulkInsert('users', users, {});
   },
 

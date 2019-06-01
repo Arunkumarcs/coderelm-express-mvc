@@ -1,6 +1,8 @@
 require('@arunkumarcoderelm/use')
 const base = process.cwd();
 const nunjucks = use('nunjucks');
+const Providers = use('Config/Providers');
+const middleware = use('Config/Middleware');
 
 /**
  * Core
@@ -12,7 +14,6 @@ class Core {
         global.$_        = use('lodash');
         global.$config   = use('config');
         global.$moment   = use('moment');
-        global.$models   = use("Db/models");
     }
 
     /**
@@ -36,23 +37,21 @@ class Core {
      * @param {*} express 
      */
     static loadProviders(app, express) {
-        let Providers = use('Config/Providers.json');
-
         // Initialize
-        Providers = $_.map(Providers, (item) => {
+        let Provider = $_.map(Providers, (item) => {
             let providerClass = use(item);
             return new providerClass(app, express);
         });
         
         // boot
-        $_.map(Providers, (item) => {
+        $_.map(Provider, (item) => {
             if(typeof item.boot === 'function') {
                 item.boot();
             }
         });
 
         // end
-        $_.map(Providers, (item) => {
+        $_.map(Provider, (item) => {
             if(typeof item.end === 'function') {
                 item.end();
             }
@@ -65,8 +64,6 @@ class Core {
      * @param {*} express 
      */
     static loadMiddleware(app, viewEnv) {
-        let middleware = use('Config/Middleware.json');
-
         // Initialize
         $_.map(middleware, (item) => {
             let middlewareClass = use(item);

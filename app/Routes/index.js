@@ -1,17 +1,37 @@
 const express = require('express');
 const router = express.Router();
+const config = use('Config/App');
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', async (req, res, next) => {
 	if (req.session.test !== undefined) {
 		req.session.test += 1
 	} else {
 		req.session.test = 1
 	}
 
+	
+	let Users = use('Model/Users');
+	Users = await Users.all();
+	
+
 	res.render('index.njk', {
 		title: 'Express'
 	});
 });
+
+// Single Page Application
+switch (config.assets) {
+	case 'es6':
+	case 'react':
+	case 'angular':
+		/* GET home page. */
+		router.all('/*',function(req,res){
+			res.sendFile(BASE_PATH+'/public/build/index.html');
+			res.end();
+		});	    
+		break;
+	default:
+		break;
+}
 
 module.exports = router;

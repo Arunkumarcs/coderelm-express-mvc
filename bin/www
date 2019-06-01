@@ -3,33 +3,36 @@
 /**
  * Module dependencies.
  */
-
 var {app, models} = require('../app');
-var debug = require('debug')('ak-express:server');
+var debug = require('debug')('coderelm-express:server');
 var http = require('http');
+var appConfig = use('Config/App');
 
 /**
  * Get port from environment and store in Express.
  */
-
-var port = normalizePort(process.env.PORT || $config.PORT);
+var port = normalizePort(appConfig.port);
 app.set('port', port);
 
 
 /**
  * Create HTTP server.
  */
-
 var server = http.createServer(app);
+if(appConfig.socket.enabled === true) {
+  var io = require('socket.io')(server);
+  use('Socket/Boot', io);
+}
 
 /**
  * Listen on provided port, on all network interfaces.
  */
-if($config.Debug === true) {
+if(appConfig.debug === true) {
   require('express-debug')(app, {
     /* settings */
   });
 }
+
 // sync() will create all table if they doesn't exist in database
 models.sequelize.sync().then(function () {
   server.listen(port);

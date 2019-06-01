@@ -1,15 +1,14 @@
 const Provider = use('Core/Provider');
+const config = use('Config/App');
 
 class Public extends Provider {
     boot() {
         // Public Path    
         // TODO: Crerate buld path for ES6, Vue & React
-        let key = "";
-        switch (key) {
+        switch (config.assets) {
             case 'es6':
             case 'react':
             case 'angular':
-            case 'es6':
                 this.app.use(
                     this.express.static(BASE_PATH+'/public/build')
                 );     

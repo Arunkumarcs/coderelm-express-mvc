@@ -1,0 +1,32 @@
+{
+  "name": "coderelm-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "cross-env SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "build": "cross-env SKIP_PREFLIGHT_CHECK=true react-scripts build",
+    "test": "cross-env SKIP_PREFLIGHT_CHECK=true react-scripts test",
+    "eject": "cross-env SKIP_PREFLIGHT_CHECK=true react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
