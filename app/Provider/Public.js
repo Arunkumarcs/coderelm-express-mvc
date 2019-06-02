@@ -3,8 +3,7 @@ const config = use('Config/App');
 
 class Public extends Provider {
     boot() {
-        // Public Path    
-        // TODO: Crerate buld path for ES6, Vue & React
+        // Public Path
         switch (config.assets) {
             case 'react':
                 this.app.use(
