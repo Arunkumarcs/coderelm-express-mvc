@@ -66,7 +66,7 @@ class Api extends Middleware {
         // throw new Error('you must be logged in'); 
 
         return { };
-      }
+    }
 }
 
 module.exports = Api;
