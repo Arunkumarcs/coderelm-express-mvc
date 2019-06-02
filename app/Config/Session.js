@@ -3,10 +3,14 @@ module.exports = {
     options: {
         secret: "ersfbhesdzdbgnfgdgf", 
         resave: false, 
-        saveUninitialized: true 
+        saveUninitialized: true,
+        cookie: { 
+            secure: true,
+            maxAge: 86400
+        }
     },
     // https://www.npmjs.com/package/session-file-store
     sessionStorage: {
-        secret: "5475687bcv"
+        secret: "5475687asdfabcv"
     }
 };
