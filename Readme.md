@@ -8,6 +8,11 @@
 * Testing framework [Jest](https://jestjs.io/) and [Puppeteer](https://github.com/GoogleChrome/puppeteer)
 * [GraphQl](https://graphql.org/)
 
+> PreConfigured Singlepage application setup using.
+
+* ES6 Webpack
+* Vue
+* React
 
 ## Getting Started
 

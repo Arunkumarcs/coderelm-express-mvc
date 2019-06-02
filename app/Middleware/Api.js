@@ -1,20 +1,17 @@
 const Middleware = use('Core/Middleware');
 const { ApolloServer, gql, PubSub } = use('apollo-server-express');
 const { fileLoader, mergeResolvers, mergeTypes } = use('merge-graphql-schemas')
+const config = use('Config/Api');
 
 // TODO: Fix csurf Plugin
 // const csurf = use('csurf');
-
-// TODO: GraphQl API
-// const api = use('Routes/Api');
 
 class Api extends Middleware {
     boot() {
         let app = this.app
         let {server, path} = this._apolloServer()
 
-        // TODO: GraphQl API
-        // this.app.use('/api/', api);
+        // GraphQl API
         server.applyMiddleware({ app, path });
     
         // TODO: Fix csurf Plugin
@@ -22,42 +19,54 @@ class Api extends Middleware {
     }
     
     _apolloServer() {
+        let self = this;
+
         // Construct a schema, using GraphQL schema language
-        let typesArray = fileLoader(BASE_PATH+'/plugins/GraphQl/Schema/**/*.graphql');
-        typesArray = mergeTypes(typesArray, { all: true });
-        const typeDefs = gql`${typesArray}`;
+        // let typesArray = fileLoader(BASE_PATH+'/plugins/GraphQl/Schema/**/*.graphql');
+        let typesArray = fileLoader(BASE_PATH+'/plugins/**/*.graphql');
+        typesArray     = mergeTypes(typesArray, { all: true });
 
         // Provide resolver functions for your schema fields
-        let resolversArray = fileLoader(BASE_PATH+'/plugins/GraphQl/Resolver/**/*');
-        resolversArray = mergeResolvers(resolversArray);
+        // let resolversArray = fileLoader(BASE_PATH+'/plugins/GraphQl/Resolver/**/*-resolver.js');
+        let resolversArray = fileLoader(BASE_PATH+'/plugins/**/*-resolver.js');
+        resolversArray     = mergeResolvers(resolversArray);
+
+        const typeDefs  = gql`${typesArray}`;
         const resolvers = resolversArray;
         
         // TODO: example for subscription
         // https://www.apollographql.com/docs/apollo-server/features/subscriptions
-        const pubsub = new PubSub();
+        // const pubsub = new PubSub();
 
-        // TODO: Implement Authendication
+        
         // https://www.apollographql.com/docs/apollo-server/features/metrics
-        // https://www.apollographql.com/docs/apollo-server/features/authentication
-
         const server = new ApolloServer({ 
             typeDefs, 
             resolvers,
-
-            // https://www.apollographql.com/docs/apollo-server/features/graphql-playground
-            // introspection: true,
-            playground: {
-                settings: {
-                  'editor.theme': 'dark',
-                }
-            }
+            context: self._context,
+            ...config.options
         });
-        const path = '/api';
+
         return {
             server,
-            path
-        }
+            path: config.path
+        };
     }
+
+    // TODO: Implement Authendication
+    // https://www.apollographql.com/docs/apollo-server/features/authentication
+    _context(obj) {
+        // get the user token from the headers
+        // const token = req.headers.authorization || '';
+       
+        // try to retrieve a user with the token
+        // const user = getUser(token);
+       
+        // add the user to the context
+        // throw new Error('you must be logged in'); 
+
+        return { };
+      }
 }
 
 module.exports = Api;

@@ -14,7 +14,8 @@
     "restart-pm2": "pm2 restart expCodeRelm",
     "stop-pm2": "pm2 stop expCodeRelm",
     "test": "./node_modules/.bin/jest",
-    "assets-es6": "cd src/es6 && yarn build"
+    "assets-es6": "cd src/es6 && yarn build",
+    "assets-react": "cd src/react && yarn build"
   },
   "dependencies": {
     "@arunkumarcoderelm/use": "^1.0.1",
@@ -35,6 +36,7 @@
     "lodash": "^4.17.11",
     "merge-graphql-schemas": "^1.5.8",
     "moment": "^2.24.0",
+    "mongoose": "^5.5.12",
     "morgan": "~1.9.0",
     "mysql2": "^1.6.5",
     "nunjucks": "^3.2.0",
@@ -42,7 +44,8 @@
     "rotating-file-stream": "^1.4.0",
     "sequelize": "^5.8.5",
     "sequelize-cli": "^5.4.0",
-    "session-file-store": "^1.2.0"
+    "session-file-store": "^1.2.0",
+    "socket.io": "^2.2.0"
   },
   "keywords": [
     "MVC",
