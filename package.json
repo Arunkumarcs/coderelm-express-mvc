@@ -15,7 +15,8 @@
     "stop-pm2": "pm2 stop expCodeRelm",
     "test": "./node_modules/.bin/jest",
     "assets-es6": "cd src/es6 && yarn build",
-    "assets-react": "cd src/react && yarn build"
+    "assets-react": "cd src/react && yarn build",
+    "assets-vue": "cd src/vue && yarn build"
   },
   "dependencies": {
     "@arunkumarcoderelm/use": "^1.0.1",
