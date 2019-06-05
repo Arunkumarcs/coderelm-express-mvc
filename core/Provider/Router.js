@@ -1,5 +1,4 @@
-const Core = use('Core/Core');
-const Provider = use('Core/Provider');
+const {Core, Provider} = use('Core/');
 
 class Router extends Provider {
     boot() {

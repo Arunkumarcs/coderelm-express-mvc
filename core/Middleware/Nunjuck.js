@@ -1,4 +1,4 @@
-const { Middleware } = use('Core/index');
+const { Middleware } = use('Core/');
 
 // Nunjuck Middleware
 class Nunjuck extends Middleware {

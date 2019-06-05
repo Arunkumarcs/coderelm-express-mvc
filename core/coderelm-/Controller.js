@@ -1,6 +1,6 @@
 class Controller {
     constructor() {
-        this.$theme = null;
+        this.$theme = "";
         this.$time = {
             format: $moment().format('YYYY-MM-DD HH:MM:SS'),
             unix: $moment().unix(),

@@ -1,4 +1,4 @@
-const { Middleware } = use('Core/index');
+const { Middleware } = use('Core/');
 const helmet = use('helmet');
 
 class Security extends Middleware {

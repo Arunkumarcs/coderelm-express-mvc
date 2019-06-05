@@ -1,4 +1,4 @@
-const App = use('Core/Interface/App');
+const App = require('./Interface/App');
 
 class Provider extends App {
     constructor(app, express) {
