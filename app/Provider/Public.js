@@ -1,4 +1,4 @@
-const Provider = use('Core/Provider');
+const { Provider } = use('Core/index');
 const config = use('Config/App');
 
 class Public extends Provider {

@@ -1,5 +1,3 @@
-const proxyHandler = use('Core/ProxyHandler');
-
 class Controller {
     constructor() {
         this.$theme = null;

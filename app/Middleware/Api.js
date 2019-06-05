@@ -1,4 +1,4 @@
-const Middleware = use('Core/Middleware');
+const { Middleware } = use('Core/index');
 const { ApolloServer, gql, PubSub } = use('apollo-server-express');
 const { fileLoader, mergeResolvers, mergeTypes } = use('merge-graphql-schemas')
 const config = use('Config/Api');
