@@ -8,11 +8,9 @@ router.get('/', async (req, res, next) => {
 	} else {
 		req.session.test = 1
 	}
-
 	
 	let Users = use('Model/Users');
 	Users = await Users.all();
-	
 
 	res.render('index.njk', {
 		title: 'Express'
@@ -21,26 +19,14 @@ router.get('/', async (req, res, next) => {
 
 // Single Page Application
 switch (config.assets) {
-	case 'es6':
-		/* GET home page. */
-		router.all('/*',function(req,res){
-			res.sendFile(BASE_PATH+'/public/build/index.html');
-			res.end();
-		});	    
-		break;
 	case 'vue':
-		/* GET home page. */
-		router.all('/*',function(req,res){
-			res.sendFile(BASE_PATH+'/public/vue-build/index.html');
-			res.end();
-		});	    
-		break;
+	case 'es6':
 	case 'react':
 		/* GET home page. */
 		router.all('/*',function(req,res){
-			res.sendFile(BASE_PATH+'/public/react-build/index.html');
+			res.sendFile(BASE_PATH+'/dist/index.html');
 			res.end();
-		});	  
+		});
 		break;
 	default:
 		break;

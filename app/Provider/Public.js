@@ -5,20 +5,12 @@ class Public extends Provider {
     boot() {
         // Public Path
         switch (config.assets) {
-            case 'react':
-                this.app.use(
-                    this.express.static(BASE_PATH+'/public/react-build')
-                );     
-                break;
             case 'es6':
-                this.app.use(
-                    this.express.static(BASE_PATH+'/public/build')
-                );     
-                break;
+            case 'react':
             case 'vue':
                 this.app.use(
-                    this.express.static(BASE_PATH+'/public/vue-build')
-                );    
+                    this.express.static(BASE_PATH+'/dist')
+                );     
                 break;
             default:
                 this.app.use(
