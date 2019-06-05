@@ -1,4 +1,4 @@
-const Provider = use('Core/Provider');
+const { Provider } = use('Core/');
 const config = use('Config/App');
 
 class Db extends Provider {

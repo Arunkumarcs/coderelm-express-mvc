@@ -21,7 +21,7 @@ app.set('port', port);
 var server = http.createServer(app);
 if(appConfig.socket.enabled === true) {
   var io = require('socket.io')(server);
-  use('Socket/Boot', io);
+  use('Core/Socket', io);
 }
 
 /**

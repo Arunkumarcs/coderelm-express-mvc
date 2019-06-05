@@ -1,7 +1,7 @@
 const sessionConfig = use('Config/Session');
 const session = use('express-session');
 const FileStore = use('session-file-store', session); // https://www.npmjs.com/package/session-file-store
-const Provider = use('Core/Provider');
+const {Provider} = use('Core/');
 
 class Session extends Provider {
     boot() {

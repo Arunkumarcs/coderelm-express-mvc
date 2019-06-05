@@ -20,7 +20,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Bootstrapping 
-var {models} = require('./core/Bootstrap')(app, express)
+let { Bootstrap } = require('./core');
+var { models } = Bootstrap(app, express);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

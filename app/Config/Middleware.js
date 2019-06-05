@@ -1,5 +1,5 @@
 module.exports = [
-    "Middleware/Security",
-    "Middleware/Api",
-    "Middleware/Nunjuck"
+    "Core/Middleware/Security",
+    "Core/Middleware/Api",
+    "Core/Middleware/Nunjuck"
 ];
