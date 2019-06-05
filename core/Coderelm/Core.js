@@ -1,6 +1,5 @@
 require('@arunkumarcoderelm/use')
 const base = process.cwd();
-const nunjucks = use('nunjucks');
 const Providers = use('Config/Providers');
 const middleware = use('Config/Middleware');
 
@@ -12,23 +11,7 @@ class Core {
         // $config
         global.BASE_PATH = base;
         global.$_        = use('lodash');
-        global.$config   = use('config');
         global.$moment   = use('moment');
-    }
-
-    /**
-     * Initialize View Engine
-     * @param {*} app 
-     */
-    static nunjucks(app) {
-        return nunjucks.configure(
-            `${base}/resources/Views`, 
-            {
-                autoescape: true,
-                express: app,
-                watch: true
-            }
-        );
     }
 
     /**

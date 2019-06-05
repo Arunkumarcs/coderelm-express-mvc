@@ -1,9 +1,8 @@
 const App = require('./Interface/App');
 
 class Middleware extends App {
-    constructor(app, express) {
+    constructor(app) {
         super(app);
-        this.express = express;
     }
 }
 

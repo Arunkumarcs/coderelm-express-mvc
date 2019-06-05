@@ -1,6 +1,6 @@
 const Bootstrap = require('./Bootstrap');
 const Middleware = require('./Middleware');
-const Provider = require('./Middleware');
+const Provider = require('./Provider');
 const Controller = require('./Controller');
 const Core = require('./Core');
 

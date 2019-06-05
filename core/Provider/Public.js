@@ -21,6 +21,23 @@ class Public extends Provider {
     }
 
     end() { }
+
+    // Single Page Application
+    static dist(router) {
+        switch (config.assets) {
+            case 'vue':
+            case 'es6':
+            case 'react':
+                /* GET home page. */
+                router.all('/*',  (req, res) => {
+                    res.sendFile(BASE_PATH + '/dist/index.html');
+                    res.end();
+                });
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 module.exports = Public;
