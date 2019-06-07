@@ -2,16 +2,14 @@
   "name": "coderelm-express-mvc",
   "version": "2.0.0",
   "description": "Supercharged Express Generator with Express MVC structure integrated with Sequalize ORM and Nunjucks template engine along with Jest and Puppeteer test framework integrated from Coderelm Team.",
-  "main": "serv.js",
+  "main": "./bin/www",
   "repository": "https://github.com/Arunkumarcs/express-mvc.git",
   "author": "Arunkumar <arunkumarcoderelm@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=development node serv.js",
-    "start-test": "cross-env NODE_ENV=test node serv.js",
-    "start-pro": "cross-env NODE_ENV=production node serv.js",
-    "nuxt-dev": "cross-env NODE_ENV=development nodemon serv.js --watch server",
-    "nuxt-build": "nuxt build",
+    "start": "cross-env NODE_ENV=development node ./bin/www",
+    "start-test": "cross-env NODE_ENV=test node ./bin/www",
+    "start-pro": "cross-env NODE_ENV=production node ./bin/www",
     "strat-pm2": "pm2 start",
     "restart-pm2": "pm2 restart expCodeRelm",
     "stop-pm2": "pm2 stop expCodeRelm",
@@ -22,7 +20,6 @@
   },
   "dependencies": {
     "@arunkumarcoderelm/use": "^1.0.1",
-    "@nuxtjs/pwa": "^3.0.0-beta.16",
     "apollo-server-express": "^2.5.0",
     "config": "^3.0.1",
     "cookie-parser": "~1.4.3",
@@ -44,7 +41,6 @@
     "morgan": "~1.9.0",
     "mysql2": "^1.6.5",
     "nunjucks": "^3.2.0",
-    "nuxt": "^2.8.1",
     "redux": "^4.0.1",
     "rotating-file-stream": "^1.4.0",
     "sequelize": "^5.8.5",
@@ -80,7 +76,6 @@
   "devDependencies": {
     "express-debug": "^1.1.1",
     "jest": "^24.7.1",
-    "nodemon": "^1.19.1",
     "puppeteer": "^1.16.0"
   }
 }

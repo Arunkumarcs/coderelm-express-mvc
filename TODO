@@ -18,12 +18,15 @@ ARUN TODO:
             ✔ Samples For Migrations @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(31s)
             ✔ Samples For Seeders @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(35s)
             ✔ Samples For Model @started(19-06-01 08:12) @done(19-06-01 08:12) @lasted(22s)
-        ☐ Mongose @started(19-06-01 16:57)
+        ☐ Mongose
     ☐ API @started(19-05-29 08:35)
         ✔ GraphQL @started(19-05-29 08:35) @done(19-05-29 08:35) @lasted(52s)
             ☐ Authendication 
             ☐ Subscription
         ☐ AJAX
+    ☐ Server Side Rendering
+        ☐ React Next @started(19-06-07 07:10)
+        ☐ Vue Nuxt
 
 GAYATHRI TODO:
     ☐ Commander Line Interface
@@ -38,6 +41,4 @@ KESAVAN TODO:
     ☐ Implement Security NPM's
 
 FEATURE HOLD:
-    ☐ Server Side Rendering
-        ☐ React Next
-        ☐ Vue Nuxt
+    ☐ Documentation

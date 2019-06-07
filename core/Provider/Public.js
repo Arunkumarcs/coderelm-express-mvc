@@ -7,6 +7,7 @@ class Public extends Provider {
         switch (config.assets) {
             case 'next':
             case 'nuxt':
+                break;
             case 'es6':
             case 'react':
             case 'vue':
@@ -27,8 +28,6 @@ class Public extends Provider {
     // Single Page Application
     static dist(router) {
         switch (config.assets) {
-            case 'next':
-            case 'nuxt':
             case 'vue':
             case 'es6':
             case 'react':
@@ -38,6 +37,8 @@ class Public extends Provider {
                     res.end();
                 });
                 break;
+            case 'nuxt':
+            case 'next':
             default:
                 break;
         }
