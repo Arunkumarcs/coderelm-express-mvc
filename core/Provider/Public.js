@@ -5,6 +5,8 @@ class Public extends Provider {
     boot() {
         // Public Path
         switch (config.assets) {
+            case 'next':
+            case 'nuxt':
             case 'es6':
             case 'react':
             case 'vue':
@@ -25,6 +27,8 @@ class Public extends Provider {
     // Single Page Application
     static dist(router) {
         switch (config.assets) {
+            case 'next':
+            case 'nuxt':
             case 'vue':
             case 'es6':
             case 'react':

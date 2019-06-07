@@ -1,6 +1,6 @@
 {
     "port": 4000,
     "debug": true,
-    // react, vue, es6 
+    // react, vue, es6, next, nuxt
     "assets": "" 
 }
