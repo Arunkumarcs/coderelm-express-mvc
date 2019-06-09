@@ -4,11 +4,11 @@ Core.globalsDeclaration();
 /**
  * 
  */
-module.exports = async (
+module.exports = (
     app, 
     express = require('express')
 ) => {
-    await Core.loadProviders(app, express);
+    Core.loadProviders(app, express);
     
     // Return Sequalize Models
     return {

@@ -4,10 +4,9 @@ const {App} = use('Config/');
 
 // Nunjuck Middleware
 class Nuxt extends Middleware {
-    async boot() {
+    boot() {
         if(App.assets === "nuxt") {
-            console.log('s1')
-            await this.start();
+            this.start();
         }
     }
 
@@ -26,7 +25,7 @@ class Nuxt extends Middleware {
         }
     
         // Give nuxt middleware to express
-        await this.app.use(nuxtJ.render)
+        this.app.use(nuxtJ.render)
     }
   
 }

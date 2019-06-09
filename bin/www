@@ -3,8 +3,8 @@
 /**
  * Module dependencies.
  */
-module.exports = (app, models) => {  
-  // var {app, models} = require('../app');
+// module.exports = (app, models) => {  
+  var {app, models} = require('../app');
   var debug = require('debug')('coderelm-express:server');
   var http = require('http');
   var appConfig = use('Config/App');
@@ -97,4 +97,4 @@ module.exports = (app, models) => {
       : 'port ' + addr.port;
     debug('Listening on ' + bind);
   }
-}
+// }

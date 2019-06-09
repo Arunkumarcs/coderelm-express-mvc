@@ -19,24 +19,24 @@ class Core {
      * @param {*} app 
      * @param {*} express 
      */
-    static async loadProviders(app, express) {
+    static loadProviders(app, express) {
         // Initialize
-        let Provider = await $_.map(Providers, (item) => {
+        let Provider = $_.map(Providers, (item) => {
             let providerClass = use(item);
             return new providerClass(app, express);
         });
         
         // boot
-        await $_.map(Provider, async (item) => {
+        $_.map(Provider, (item) => {
             if(typeof item.boot === 'function') {
-                await item.boot();
+                item.boot();
             }
         });
 
         // end
-        await $_.map(Provider, async (item) => {
+        $_.map(Provider, (item) => {
             if(typeof item.end === 'function') {
-                await item.end();
+                item.end();
             }
         });
     }
@@ -46,14 +46,14 @@ class Core {
      * @param {*} app 
      * @param {*} express 
      */
-    static async loadMiddleware(app, viewEnv) {
+    static loadMiddleware(app, viewEnv) {
         // Initialize
-        await $_.map(middleware, async (item) => {
+        $_.map(middleware, (item) => {
             let middlewareClass = use(item);
             let middlewareobj = new middlewareClass(app, viewEnv);
             
             if(typeof middlewareobj.boot === 'function') {
-                await middlewareobj.boot();
+                middlewareobj.boot();
             }
         });
     }
