@@ -13,7 +13,7 @@ class Api extends Middleware {
         let {server, path} = this._apolloServer()
 
         // GraphQl API
-        // app.use(cors())
+        app.use(cors())
         // app.options('/api', cors());
         server.applyMiddleware({ app, path });
     
