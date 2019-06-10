@@ -6,9 +6,7 @@ class Router extends Provider {
         Core.loadMiddleware(this.app);
 
         // Routes
-        use('App/Router')(
-            this.app
-        );
+        use('App/Router')(this.app);
     }
     
     end() { }

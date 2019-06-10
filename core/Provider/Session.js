@@ -5,16 +5,26 @@ const {Provider} = use('Core/');
 
 class Session extends Provider {
     boot() {
-        // Session Setup
-        this.app.use(session({
-            ...sessionConfig.options,
+        let seeeionObj = {}
 
-            store: new FileStore({
-                path: BASE_PATH+"/temp/Session",
-                
-                ...sessionConfig.sessionStorage
-            }),
-        }));
+        // Session Setup
+        if(sessionConfig.enableSessionStorage) {
+            seeeionObj = {
+                ...sessionConfig.options,
+    
+                store: new FileStore({
+                    path: BASE_PATH+"/temp/Session",
+                    
+                    ...sessionConfig.sessionStorage
+                }),
+            }
+        } else {
+            seeeionObj = {
+                ...sessionConfig.options
+            }
+        }
+
+        this.app.use(session(seeeionObj));
     }
     
     end() { }
