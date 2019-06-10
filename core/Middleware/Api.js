@@ -1,6 +1,8 @@
 const { Middleware } = use('Core/');
-// const { ApolloServer, gql, PubSub } = use('apollo-server-express');
+const { ApolloServer, gql, PubSub, graphqlExpress  } = use('apollo-server-express');
 const { fileLoader, mergeResolvers, mergeTypes } = use('merge-graphql-schemas');
+const { makeExecutableSchema } = use('graphql-tools')
+const bodyParser = use('body-parser')
 const cors = use('cors');
 const config = use('Config/Api');
 const graphqlHTTP = use('express-graphql');
@@ -62,6 +64,31 @@ class Api extends Middleware {
     graphResolver() {
         let rootValue = fileLoader(BASE_PATH + '/plugins/**/*-resolver.js');
         return mergeResolvers(rootValue);
+    }
+}
+
+// https://github.com/prisma/graphql-playground/blob/master/packages/graphql-playground-middleware-express/examples/basic/index.js
+// https://github.com/prisma/graphql-playground
+class Api1 extends Middleware {
+    boot(app) {
+        const schema = makeExecutableSchema({
+            typeDefs: `
+                type Query {
+                    hello: String!
+                }
+                schema {
+                    query: Query
+                }
+            `,
+            resolvers: {
+                Query: {
+                    hello: () => 'world',
+                },
+            },
+        });
+        app.use('/graphql', bodyParser.json(), graphqlExpress({
+            schema
+        }));
     }
 }
 

@@ -25,6 +25,8 @@ ARUN TODO:
         ✔ GraphQL @started(19-05-29 08:35) @done(19-05-29 08:35) @lasted(52s)
             ☐ Authendication 
             ☐ Subscription
+            ☐ Playground https://github.com/prisma/graphql-playground
+            ☐ https://github.com/prisma/graphql-playground/blob/master/packages/graphql-playground-middleware-express/examples/basic/index.js
         ☐ AJAX
 
 GAYATHRI TODO:
