@@ -9,5 +9,11 @@ module.exports = {
             }
         }
     },
-    path: "/api"
+    path: "/api",
+
+    // https://www.rockyourcode.com/how-to-enable-cors-for-apollo-server
+    cors: {
+        origin: '*',            // <- allow request from all domains
+        credentials: true
+    }
 };

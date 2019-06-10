@@ -1,7 +1,7 @@
 const { Middleware } = use('Core/');
 const { ApolloServer, gql, PubSub } = use('apollo-server-express');
 const { fileLoader, mergeResolvers, mergeTypes } = use('merge-graphql-schemas')
-const cors = use('cors');
+// const cors = use('cors');
 const config = use('Config/Api');
 
 // TODO: Fix csurf Plugin
@@ -13,7 +13,7 @@ class Api extends Middleware {
         let {server, path} = this._apolloServer()
 
         // GraphQl API
-        app.use(cors())
+        // app.use(cors())
         // app.options('/api', cors());
         server.applyMiddleware({ app, path });
     
