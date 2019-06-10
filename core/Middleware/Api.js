@@ -14,7 +14,7 @@ class Api extends Middleware {
 
         // GraphQl API
         // app.use(cors())
-        app.options('/api', cors());
+        // app.options('/api', cors());
         server.applyMiddleware({ app, path });
     
         // TODO: Fix csurf Plugin
