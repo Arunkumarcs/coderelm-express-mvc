@@ -1,19 +1,14 @@
 module.exports = {
     // GraphQl Options
+    // https://www.npmjs.com/package/express-graphql
+    // https://github.com/prisma/graphql-playground/releases
     options: {
-        // https://www.apollographql.com/docs/apollo-server/features/graphql-playground
-        // introspection: true,
-        playground: {
-            settings: {
-                "editor.theme": "dark"
-            }
-        }
+        graphiql: false
     },
     path: "/api",
 
-    // https://www.rockyourcode.com/how-to-enable-cors-for-apollo-server
+    // cors npm
     cors: {
-        origin: '*',            // <- allow request from all domains
-        credentials: true
+        enabled: true
     }
 };

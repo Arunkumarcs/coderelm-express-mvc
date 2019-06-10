@@ -1,6 +1,5 @@
 class App {
-    constructor(app) {
-        this.app = app;
+    constructor() {
     }
 }
 

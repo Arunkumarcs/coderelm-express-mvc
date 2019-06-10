@@ -3,18 +3,17 @@ const nunjucks = use('nunjucks');
 
 // Nunjuck Middleware
 class Nunjuck extends Middleware {
-    boot() {
-        let self = this;
-
+    boot(app) {
+        
         let view = nunjucks.configure(
             `${BASE_PATH}/resources/Views`, {
                 autoescape: true,
-                express: self.app,
+                express: app,
                 watch: true
             }
         );
         
-        self.app.use((req, res, next) => {
+        app.use((req, res, next) => {
             use(
                 'Library/Nunjuck', 
                 view,

@@ -4,7 +4,7 @@ const FileStore = use('session-file-store', session); // https://www.npmjs.com/p
 const {Provider} = use('Core/');
 
 class Session extends Provider {
-    boot() {
+    boot(app) {
         let seeeionObj = {}
 
         // Session Setup
@@ -24,7 +24,7 @@ class Session extends Provider {
             }
         }
 
-        this.app.use(session(seeeionObj));
+        app.use(session(seeeionObj));
     }
     
     end() { }

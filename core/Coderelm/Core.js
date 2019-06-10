@@ -23,20 +23,20 @@ class Core {
         // Initialize
         let Provider = $_.map(Providers, (item) => {
             let providerClass = use(item);
-            return new providerClass(app, express);
+            return new providerClass();
         });
         
         // boot
         $_.map(Provider, (item) => {
             if(typeof item.boot === 'function') {
-                item.boot();
+                item.boot(app, express);
             }
         });
 
         // end
         $_.map(Provider, (item) => {
             if(typeof item.end === 'function') {
-                item.end();
+                item.end(app, express);
             }
         });
     }
@@ -50,10 +50,10 @@ class Core {
         // Initialize
         $_.map(middleware, (item) => {
             let middlewareClass = use(item);
-            let middlewareobj = new middlewareClass(app, viewEnv);
+            let middlewareObj = new middlewareClass();
             
-            if(typeof middlewareobj.boot === 'function') {
-                middlewareobj.boot();
+            if (typeof middlewareObj.boot === 'function') {
+                middlewareObj.boot(app, viewEnv);
             }
         });
     }

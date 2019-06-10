@@ -1,12 +1,12 @@
 const {Core, Provider} = use('Core/');
 
 class Router extends Provider {
-    boot() {
+    boot(app) {
         // Global Middleware
-        Core.loadMiddleware(this.app);
+        Core.loadMiddleware(app);
 
         // Routes
-        use('App/Router')(this.app);
+        use('App/Router')(app);
     }
     
     end() { }

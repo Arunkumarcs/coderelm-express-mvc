@@ -2,8 +2,8 @@ const { Middleware } = use('Core/');
 const helmet = use('helmet');
 
 class Security extends Middleware {
-    boot() {
-        this.app.use((req, res, next) => {
+    boot(app) {
+        app.use((req, res, next) => {
             // console.log("\n****************************************************\n");
             // console.log(req.body);
             // console.log(req.query);
@@ -13,7 +13,7 @@ class Security extends Middleware {
         });
     
         // Security Middleware
-        this.app.use(helmet());
+        app.use(helmet());
     }
 }
 
