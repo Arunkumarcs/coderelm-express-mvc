@@ -1,7 +1,7 @@
 const { Middleware } = use('Core/');
 const { ApolloServer, gql, PubSub } = use('apollo-server-express');
 const { fileLoader, mergeResolvers, mergeTypes } = use('merge-graphql-schemas')
-const cors = use('cors');
+// const cors = use('cors');
 const config = use('Config/Api');
 
 // TODO: Fix csurf Plugin
