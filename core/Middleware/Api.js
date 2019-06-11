@@ -8,8 +8,7 @@ const config = use('Config/Api');
 // const csurf = use('csurf');
 
 class Api extends Middleware {
-    boot() {
-        let app = this.app
+    boot(app) {
         let {server, path} = this._apolloServer()
 
         // GraphQl API
