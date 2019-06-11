@@ -20,7 +20,7 @@ ARUN TODO:
             ✔ Samples For Migrations @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(31s)
             ✔ Samples For Seeders @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(35s)
             ✔ Samples For Model @started(19-06-01 08:12) @done(19-06-01 08:12) @lasted(22s)
-        ☐ Mongose
+        ☐ Mongose - https://mlab.com/plans/            
     ☐ API @started(19-05-29 08:35)
         ✔ GraphQL @started(19-05-29 08:35) @done(19-05-29 08:35) @lasted(52s)
             ☐ Authendication 
