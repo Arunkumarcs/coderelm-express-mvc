@@ -15,8 +15,10 @@ class Api extends Middleware {
         // app.use(cors())
         if (config.cors.enabled) {
             // app.options('/api', cors());
-        }
-        server.applyMiddleware({ app, path });
+            server.applyMiddleware({ app, path, cors: true });
+        } else {
+            server.applyMiddleware({ app, path });
+        }        
     
         // TODO: Fix csurf Plugin
         // this.app.use(csurf());        

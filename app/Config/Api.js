@@ -14,7 +14,7 @@ module.exports = {
         // }
         introspection: true,
         playground: true,
-        
+
         // https://www.apollographql.com/docs/apollo-server/api/apollo-server/#parameters
         cors: true
     },
