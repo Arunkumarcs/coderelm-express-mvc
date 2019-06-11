@@ -1,9 +1,17 @@
 module.exports = {
     // GraphQl Options
-    // https://www.npmjs.com/package/express-graphql
-    // https://github.com/prisma/graphql-playground/releases
     options: {
-        graphiql: true
+        // https://www.npmjs.com/package/express-graphql
+        // https://github.com/prisma/graphql-playground/releases
+        // graphiql: true
+        
+        // https://www.apollographql.com/docs/apollo-server/features/graphql-playground
+        // introspection: true,
+        playground: {
+            settings: {
+                "editor.theme": "dark"
+            }
+        }
     },
     path: "/api",
 

@@ -46,14 +46,14 @@ class Core {
      * @param {*} app 
      * @param {*} express 
      */
-    static loadMiddleware(app, viewEnv) {
+    static loadMiddleware(app) {
         // Initialize
         $_.map(middleware, (item) => {
             let middlewareClass = use(item);
             let middlewareObj = new middlewareClass();
             
             if (typeof middlewareObj.boot === 'function') {
-                middlewareObj.boot(app, viewEnv);
+                middlewareObj.boot(app);
             }
         });
     }
