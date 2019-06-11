@@ -4,7 +4,6 @@ const nunjucks = use('nunjucks');
 // Nunjuck Middleware
 class Nunjuck extends Middleware {
     boot(app) {
-        
         let view = nunjucks.configure(
             `${BASE_PATH}/resources/Views`, {
                 autoescape: true,

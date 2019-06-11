@@ -71,25 +71,23 @@ class Api extends Middleware {
 // https://github.com/prisma/graphql-playground
 class Api1 extends Middleware {
     boot(app) {
-        const schema = makeExecutableSchema({
-            typeDefs: `
-                type Query {
-                    hello: String!
-                }
-                schema {
-                    query: Query
-                }
-            `,
-            resolvers: {
-                Query: {
-                    hello: () => 'world',
-                },
+        const typeDefs = gql`
+            type Query {
+                hello: String
+            }
+        `;
+
+        const resolvers = {
+            Query: {
+                hello: () => 'Hello world!'
             },
-        });
-        app.use('/graphql', bodyParser.json(), graphqlExpress({
-            schema
-        }));
+        };
+
+        const server = new ApolloServer({ typeDefs, resolvers });
+
+        app.use("/api", cors());
+        server.applyMiddleware({ app, path: config.path});
     }
 }
 
-module.exports = Api;
+module.exports = Api1;
