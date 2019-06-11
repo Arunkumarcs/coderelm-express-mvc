@@ -7,11 +7,13 @@ module.exports = {
         
         // https://www.apollographql.com/docs/apollo-server/features/graphql-playground
         // introspection: true,
-        playground: {
-            settings: {
-                "editor.theme": "dark"
-            }
-        }
+        // playground: {
+        //     settings: {
+        //         "editor.theme": "dark"
+        //     }
+        // }
+        introspection: true,
+        playground: true,
     },
     path: "/api",
 
