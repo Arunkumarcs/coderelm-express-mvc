@@ -14,7 +14,7 @@ class Api extends Middleware {
         // GraphQl API
         // app.use(cors())
         if (config.cors.enabled) {
-            app.options('/api', cors());
+            // app.options('/api', cors());
         }
         server.applyMiddleware({ app, path });
     
