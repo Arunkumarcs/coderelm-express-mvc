@@ -15,6 +15,7 @@ DONE TODO:
         ✘ Vue Nuxt @cancelled(19-06-09 07:39)
     
 ARUN TODO:
+    ☐ Service Procider Life Cycle
     ☐ Implement DB setup @started(19-05-04 18:02) 
         ✔ Sequalize @started(19-05-04 18:02) @done(19-05-05 10:18) @lasted(16h16m48s)
             ✔ Samples For Migrations @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(31s)
@@ -42,6 +43,7 @@ KESAVAN TODO:
     ☐ Implement Security NPM's
 
 FEATURE HOLD:
+    ☐ Plugin Provider
     ☐ https://opensource.guide/
     ☐ Documentation
     ☐ Aplool Client

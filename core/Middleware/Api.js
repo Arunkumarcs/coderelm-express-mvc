@@ -29,12 +29,14 @@ class Api extends Middleware {
 
         // Construct a schema, using GraphQL schema language
         // let typesArray = fileLoader(BASE_PATH+'/plugins/GraphQl/Schema/**/*.graphql');
-        let typesArray = fileLoader(BASE_PATH+'/plugins/**/*.graphql');
+        // let typesArray = fileLoader(BASE_PATH + '/plugins/**/*.graphql');
+        let typesArray = fileLoader(BASE_PATH + '/app/Api/Schema/*.graphql');
         typesArray     = mergeTypes(typesArray, { all: true });
 
         // Provide resolver functions for your schema fields
         // let resolversArray = fileLoader(BASE_PATH+'/plugins/GraphQl/Resolver/**/*-resolver.js');
-        let resolversArray = fileLoader(BASE_PATH+'/plugins/**/*-resolver.js');
+        // let resolversArray = fileLoader(BASE_PATH + '/plugins/**/*-resolver.js');
+        let resolversArray = fileLoader(BASE_PATH + '/app/Api/Resolver/*.js');
         resolversArray     = mergeResolvers(resolversArray);
 
         const typeDefs  = gql`${typesArray}`;
