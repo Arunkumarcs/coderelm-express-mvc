@@ -3,98 +3,109 @@
 /**
  * Module dependencies.
  */
-// module.exports = (app, models) => {  
-  var {app, models} = require('../app');
-  var debug = require('debug')('coderelm-express:server');
-  var http = require('http');
-  var appConfig = use('Config/App');
+var {app, models} = require('../app');
+var debug = require('debug')('coderelm-express:server');
+var http = require('http');
+var appConfig = use('Config/App');
+var dbConfig = use('Config/Db');
+var socketConfig = use('Config/Socket');
 
-  /**
-   * Get port from environment and store in Express.
-   */
-  var port = normalizePort(appConfig.port);
-  app.set('port', port);
+/**
+ * Get port from environment and store in Express.
+ */
+var port = normalizePort(appConfig.port);
+app.set('port', port);
 
-  /**
-   * Create HTTP server.
-   */
-  var server = http.createServer(app);
-  if(appConfig.socket.enabled === true) {
-    var io = require('socket.io')(server);
-    use('Core/Socket', io);
-  }
+/**
+ * Create HTTP server.
+ */
+var server = http.createServer(app);
+if(socketConfig.enabled === true) {
+  var io = require('socket.io')(server, socketConfig.options);
+  use('Core/Socket', io);
+}
 
-  /**
-   * Listen on provided port, on all network interfaces.
-   */
-  if(appConfig.debug === true) {
-    require('express-debug')(app, {
-      /* settings */
-    });
-  }
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+if(appConfig.debug === true) {
+  require('express-debug')(app, {
+    /* settings */
+  });
+}
 
-  // sync() will create all table if they doesn't exist in database
+// sync() will create all table if they doesn't exist in database
+if(
+  dbConfig.db === "" 
+  || dbConfig.db === "mongoose" 
+  || models === null
+) {
+  server.listen(port);
+  server.on('error', onError);
+  server.on('listening', onListening);
+  console.log(`<---------------------------- Server started on port ${port} ---------------------->`)
+} else {
   models.sequelize.sync().then(function () {
     server.listen(port);
     server.on('error', onError);
     server.on('listening', onListening);
     console.log(`<---------------------------- Server started on port ${port} ---------------------->`)
   });
+}
 
-  /**
-   * Normalize a port into a number, string, or false.
-   */
-  function normalizePort(val) {
-    var port = parseInt(val, 10);
+/**
+ * Normalize a port into a number, string, or false.
+ */
+function normalizePort(val) {
+  var port = parseInt(val, 10);
 
-    if (isNaN(port)) {
-      // named pipe
-      return val;
-    }
-
-    if (port >= 0) {
-      // port number
-      return port;
-    }
-
-    return false;
+  if (isNaN(port)) {
+    // named pipe
+    return val;
   }
 
-  /**
-   * Event listener for HTTP server "error" event.
-   */
-  function onError(error) {
-    if (error.syscall !== 'listen') {
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
       throw error;
-    }
-
-    var bind = typeof port === 'string'
-      ? 'Pipe ' + port
-      : 'Port ' + port;
-
-    // handle specific listen errors with friendly messages
-    switch (error.code) {
-      case 'EACCES':
-        console.error(bind + ' requires elevated privileges');
-        process.exit(1);
-        break;
-      case 'EADDRINUSE':
-        console.error(bind + ' is already in use');
-        process.exit(1);
-        break;
-      default:
-        throw error;
-    }
   }
+}
 
-  /**
-   * Event listener for HTTP server "listening" event.
-   */
-  function onListening() {
-    var addr = server.address();  
-    var bind = typeof addr === 'string'
-      ? 'pipe ' + addr
-      : 'port ' + addr.port;
-    debug('Listening on ' + bind);
-  }
-// }
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+function onListening() {
+  var addr = server.address();  
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}

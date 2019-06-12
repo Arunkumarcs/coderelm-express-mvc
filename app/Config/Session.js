@@ -1,4 +1,6 @@
 module.exports = {
+    enabled: true,
+
     // https://expressjs.com/en/resources/middleware/session.html
     options: {
         secret: "ersfbhesdzdbgnfgdgf", 

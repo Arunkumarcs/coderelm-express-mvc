@@ -1,4 +1,4 @@
-const PublicProvider = use('Core/Provider/Public');
+const appProvider = use('Core/Provider/App');
 const express = use('express');
 const router = express.Router();
 
@@ -9,6 +9,6 @@ router.get('/', WelcomeObj.index);
 
 
 // Single Page Application
-PublicProvider.dist(router);
+appProvider.dist(router);
 
 module.exports = router;

@@ -1,5 +1,5 @@
 module.exports = [
-    "Core/Provider/Public",
+    "Core/Provider/App",
     "Core/Provider/Db",
     "Core/Provider/Session",
     "Core/Provider/Router"

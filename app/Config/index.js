@@ -6,8 +6,6 @@ const Session = require('./Session');
 
 module.exports = {
     App,
-    Api,
     Middleware,
-    Providers,
-    Session
+    Providers
 }

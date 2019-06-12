@@ -39,7 +39,7 @@
     "lodash": "^4.17.11",
     "merge-graphql-schemas": "^1.5.8",
     "moment": "^2.24.0",
-    "mongoose": "^5.5.12",
+    "mongoose": "^5.5.14",
     "morgan": "~1.9.0",
     "mysql2": "^1.6.5",
     "nunjucks": "^3.2.0",
