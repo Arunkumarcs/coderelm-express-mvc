@@ -18,7 +18,7 @@ class Api extends Middleware {
             server.applyMiddleware({ app, path });
         }        
     
-        // TODO: Fix csurf Plugin
+        // csurf Plugin
         if(Security.csrf) {
             app.use(csurf());
             app.use((req, res, next) => {
