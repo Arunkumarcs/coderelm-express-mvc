@@ -87,10 +87,10 @@ class Core {
      * 
      * @param {*} server 
      */
-    static async afterServeProviders(server) {
+    static async afterServeProviders(server, port) {
         await $_.map(ProviderOBJ, (item) => {
             if(typeof item.afterServe === 'function') {
-                item.afterServe(server);
+                item.afterServe(server, port);
             }
         });
     }
@@ -99,10 +99,10 @@ class Core {
      * 
      * @param {*} server 
      */
-    static async endProviders(server) {
+    static async endProviders(server, port) {
         await $_.map(ProviderOBJ, (item) => {
             if(typeof item.end === 'function') {
-                item.end(server);
+                item.end(server, port);
             }
         });
     }    
