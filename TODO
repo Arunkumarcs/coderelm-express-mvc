@@ -10,12 +10,13 @@ DONE TODO:
         ✔ ES6 - https://github.com/wbkd/webpack-starter @started(19-05-13 07:21) @done(19-05-13 08:15) @lasted(54m7s)
         ✔ React @started(19-06-01 19:06) @done(19-06-01 20:18) @lasted(1h12m21s)
         ✔ Vue @started(19-06-01 21:04) @done(19-06-01 21:46) @lasted(42m33s)
+    ✔ Service Procider Life Cycle @started(19-06-13 08:57) @done(19-06-13 08:57) @lasted(25s)
+    ✔ Implement Security NPM's @started(19-06-13 08:57) @done(19-06-13 08:57) @lasted(40s)
     ✘ Server Side Rendering @cancelled(19-06-09 07:39)
         ✘ React Next @cancelled(19-06-09 07:39)
         ✘ Vue Nuxt @cancelled(19-06-09 07:39)
     
 ARUN TODO:
-    ☐ Service Procider Life Cycle
     ☐ Implement DB setup @started(19-05-04 18:02) 
         ✔ Sequalize @started(19-05-04 18:02) @done(19-05-05 10:18) @lasted(16h16m48s)
             ✔ Samples For Migrations @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(31s)
@@ -40,7 +41,6 @@ GAYATHRI TODO:
         ☐ node-notifier - https://www.npmjs.com/package/node-notifier
 
 KESAVAN TODO:
-    ☐ Implement Security NPM's
 
 FEATURE HOLD:
     ☐ Plugin Provider
