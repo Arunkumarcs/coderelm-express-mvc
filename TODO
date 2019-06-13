@@ -22,7 +22,7 @@ ARUN TODO:
             ✔ Samples For Migrations @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(31s)
             ✔ Samples For Seeders @started(19-05-05 12:18) @done(19-05-05 12:18) @lasted(35s)
             ✔ Samples For Model @started(19-06-01 08:12) @done(19-06-01 08:12) @lasted(22s)
-        ☐ Mongose - https://mlab.com/plans/            
+        ☐ Mongose - https://mlab.com/plans/ @started(19-06-13 09:01)
     ☐ API @started(19-05-29 08:35)
         ✔ GraphQL @started(19-05-29 08:35) @done(19-05-29 08:35) @lasted(52s)
             ☐ Authendication 
@@ -44,7 +44,7 @@ KESAVAN TODO:
 
 FEATURE HOLD:
     ☐ Plugin Provider
-    ☐ https://opensource.guide/
+    ☐ Opensource https://opensource.guide/
     ☐ Documentation
     ☐ Aplool Client
         ☐ React with Apollo Client - https://www.youtube.com/results?search_query=Level+1+Apollo+Client+with+React
