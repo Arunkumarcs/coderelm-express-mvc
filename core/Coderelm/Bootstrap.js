@@ -8,10 +8,11 @@ module.exports = (
     app, 
     express = require('express')
 ) => {
-    Core.loadProviders(app, express);
+    Core.startProviders();
+    Core.bootProviders(app, express);
     
     // Return Sequalize Models
     return {
-        models: $models
+        models: $models || ""
     };
 };

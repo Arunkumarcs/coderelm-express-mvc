@@ -22,7 +22,16 @@ class Db extends Provider {
         }
     }
 
-    end() { }
+    beforeServe() {
+        if(
+            config.db === "" 
+            || config.db === "mongoose" 
+            || $models === null
+        ) {
+        } else {
+            $models.sequelize.sync().then(function () { });
+        }
+    }
 }
 
 module.exports = Db;

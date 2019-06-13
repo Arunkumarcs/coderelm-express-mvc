@@ -8,10 +8,11 @@ class Session extends Provider {
         // if session enabled
         if(sessionConfig.enabled) {
             const exSession = use('express-session');
-            const FileStore = use('session-file-store', exSession); // https://www.npmjs.com/package/session-file-store
 
             // Session storage is enabled Setup
             if(sessionConfig.enableSessionStorage) {
+                const FileStore = use('session-file-store', exSession); // https://www.npmjs.com/package/session-file-store
+                
                 seeeionObj = {
                     ...sessionConfig.options,
         

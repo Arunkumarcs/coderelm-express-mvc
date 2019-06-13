@@ -1,6 +1,5 @@
 const { Provider } = use('Core/');
 const config = use('Config/App');
-
 class Public extends Provider {
     boot(app, express) {
         // Public Path
@@ -21,27 +20,6 @@ class Public extends Provider {
                 );
                 break;
         }    
-    }
-
-    end() { }
-
-    // Single Page Application
-    static dist(router) {
-        switch (config.assets) {
-            case 'vue':
-            case 'es6':
-            case 'react':
-                /* GET home page. */
-                router.all('/*',  (req, res) => {
-                    res.sendFile(BASE_PATH + '/dist/index.html');
-                    res.end();
-                });
-                break;
-            case 'nuxt':
-            case 'next':
-            default:
-                break;
-        }
     }
 }
 

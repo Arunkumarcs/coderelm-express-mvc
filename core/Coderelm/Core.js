@@ -3,6 +3,8 @@ const base = process.cwd();
 const Providers = use('Config/Providers');
 const middleware = use('Config/Middleware');
 
+let ProviderOBJ = [];
+
 /**
  * Core
  */
@@ -19,27 +21,91 @@ class Core {
      * @param {*} app 
      * @param {*} express 
      */
-    static loadProviders(app, express) {
-        // Initialize
-        let Provider = $_.map(Providers, (item) => {
+    static getProviders() {
+        return ProviderOBJ;
+    }
+    static startProviders() {
+        ProviderOBJ = $_.map(Providers, (item) => {
             let providerClass = use(item);
             return new providerClass();
         });
-        
-        // boot
-        $_.map(Provider, (item) => {
+    }
+
+    /**
+     * 
+     * @param {*} app 
+     * @param {*} express 
+     */
+    static bootProviders(app, express) {
+        $_.map(ProviderOBJ, (item) => {
             if(typeof item.boot === 'function') {
                 item.boot(app, express);
             }
         });
+    }
 
-        // end
-        $_.map(Provider, (item) => {
-            if(typeof item.end === 'function') {
-                item.end(app, express);
+    /**
+     * 
+     * @param {*} app 
+     * @param {*} express 
+     */
+    static beforeRoutesProviders(app, express) {
+        $_.map(ProviderOBJ, (item) => {
+            if(typeof item.beforeRoutes === 'function') {
+                item.beforeRoutes(app, express);
             }
         });
     }
+
+    /**
+     * 
+     * @param {*} app 
+     * @param {*} express 
+     */
+    static afterRoutesProviders(app, express) {
+        $_.map(ProviderOBJ, (item) => {
+            if(typeof item.afterRoutes === 'function') {
+                item.afterRoutes(app, express);
+            }
+        });
+    }
+
+    /**
+     * 
+     * @param {*} server 
+     * @param {*} app 
+     */
+    static async beforeServeProviders(server, app) {
+        await $_.map(ProviderOBJ, (item) => {
+            if(typeof item.beforeServe === 'function') {
+                item.beforeServe(server, app);
+            }
+        });
+    }
+
+    /**
+     * 
+     * @param {*} server 
+     */
+    static async afterServeProviders(server) {
+        await $_.map(ProviderOBJ, (item) => {
+            if(typeof item.afterServe === 'function') {
+                item.afterServe(server);
+            }
+        });
+    }
+
+    /**
+     * 
+     * @param {*} server 
+     */
+    static async endProviders(server) {
+        await $_.map(ProviderOBJ, (item) => {
+            if(typeof item.end === 'function') {
+                item.end(server);
+            }
+        });
+    }    
 
     /**
      * 

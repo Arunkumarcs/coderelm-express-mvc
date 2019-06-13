@@ -29,7 +29,7 @@ module.exports = {
         "development": {
             "username": "root",
             "password": "",
-            "database": "express_mvc",
+            "database": "express_mvcd",
             "host": "127.0.0.1",
             "dialect": "mysql",
             "pool": {

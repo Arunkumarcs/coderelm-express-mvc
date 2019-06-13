@@ -1,11 +1,9 @@
 const { Middleware } = use('Core/');
 const { ApolloServer, gql, PubSub } = use('apollo-server-express');
-const { fileLoader, mergeResolvers, mergeTypes } = use('merge-graphql-schemas')
-// const cors = use('cors');
+const { fileLoader, mergeResolvers, mergeTypes } = use('merge-graphql-schemas');
 const config = use('Config/Api');
-
-// TODO: Fix csurf Plugin
-// const csurf = use('csurf');
+const Security = use('Config/Security');
+const csurf = use('csurf');
 
 class Api extends Middleware {
     boot(app) {
@@ -21,7 +19,13 @@ class Api extends Middleware {
         }        
     
         // TODO: Fix csurf Plugin
-        // this.app.use(csurf());        
+        if(Security.csrf) {
+            app.use(csurf());
+            app.use((req, res, next) => {
+                req._csrf = req.csrfToken();
+                next();
+            });
+        }       
     }
     
     _apolloServer() {
