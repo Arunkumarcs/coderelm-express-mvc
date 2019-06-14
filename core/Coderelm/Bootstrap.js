@@ -10,9 +10,4 @@ module.exports = (
 ) => {
     Core.startProviders();
     Core.bootProviders(app, express);
-    
-    // Return Sequalize Models
-    return {
-        models: $models || ""
-    };
 };

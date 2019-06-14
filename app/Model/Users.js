@@ -1,4 +1,4 @@
-class Users extends $models.users
+class Users extends $Db.users
 {
     static async all() {
         return await Users.findAll();

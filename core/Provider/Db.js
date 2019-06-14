@@ -7,17 +7,18 @@ class Db extends Provider {
         switch (config.db) {
             case "sequelize":
                 // sequelize: mysql or postgress
-                global.$models = use("Db/models");       
+                global.$Db = use("Db/models");       
                 break;
             case "mongoose":
                 // mongoose
                 const mongoose = use('mongoose');
-                mongoose.connect(
+                global.$Db = mongoose.connect(
                     config.mongoose[env].connection, 
                     config.mongoose[env].options
                 );
+                break;
             default:     
-                global.$models = null;
+                global.$Db = null;
                 break;
         }
     }
@@ -26,10 +27,10 @@ class Db extends Provider {
         if(
             config.db === "" 
             || config.db === "mongoose" 
-            || $models === null
+            || $Db === null
         ) {
         } else {
-            $models.sequelize.sync().then(function () { });
+            $Db.sequelize.sync().then(function () { });
         }
     }
 }
