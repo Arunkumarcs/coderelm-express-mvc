@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: 'expCodeRelm',
-    script: './bin/www',
+    script: 'server.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     // args: 'one two',
