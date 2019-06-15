@@ -70,7 +70,7 @@ module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
   // Build Path
-  appBuild: resolveApp('../../dist'),
+  appBuild: resolveApp('../../public'),
   // appBuild: resolveApp('../../public/react-build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),

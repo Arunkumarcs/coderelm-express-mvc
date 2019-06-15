@@ -21,17 +21,17 @@ class Router extends Provider {
     
     assetsRoutes(app) {
         switch (config.assets) {
+            case 'nuxt':
+            case 'next':
             case 'vue':
             case 'es6':
             case 'react':
                 /* GET home page. */
                 app.all('/*',  (req, res) => {
-                    res.sendFile(BASE_PATH + '/dist/index.html');
+                    res.sendFile(BASE_PATH + '/public/index.html');
                     res.end();
                 });
                 break;
-            case 'nuxt':
-            case 'next':
             default:
                 break;
         }
