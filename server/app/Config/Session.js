@@ -13,7 +13,7 @@ module.exports = {
     },
     
     // https://www.npmjs.com/package/session-file-store
-    enableSessionStorage: true,
+    enableSessionStorage: false,
     sessionStorage: {
         secret: "5475687asdfabcv"
     }
