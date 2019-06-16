@@ -10,7 +10,7 @@
       "start": "cd server/ && yarn start",
       "start-test": "cd server/ && yarn start-test",
       "start-pro": "cd server/ && yarn start-pro",
-      "strat-pm2": "cd server/ && yarn strat-pm2",
+      "start-pm2": "cd server/ && yarn start-pm2",
       "restart-pm2": "cd server/ && yarn restart-pm2",
       "stop-pm2": "cd server/ && yarn stop-pm2",
       "test": "cd server/ && yarn test",

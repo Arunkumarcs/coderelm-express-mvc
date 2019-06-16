@@ -10,7 +10,7 @@
     "start": "cross-env NODE_ENV=development node server.js",
     "start-test": "cross-env NODE_ENV=test node server.js",
     "start-pro": "cross-env NODE_ENV=production node server.js",
-    "strat-pm2": "pm2 start",
+    "start-pm2": "pm2 start",
     "restart-pm2": "pm2 restart expCodeRelm",
     "stop-pm2": "pm2 stop expCodeRelm",
     "test": "./node_modules/.bin/jest"
