@@ -15,14 +15,15 @@ class Controller {
 
     /**
      * Render Theme Files
-     * @param {*} param0 
+     * @param {*} res 
      * @param {*} page 
      * @param {*} obj 
      */
-    render({
-        req = {},
-        res = {}
-    }, page, obj = {}) {
+    render(
+        res, 
+        page, 
+        obj = {}
+    ) {
         res.render(
             `themes/${this.$theme}/${page}.njk`,
             obj
@@ -31,14 +32,15 @@ class Controller {
 
     /**
      * Render Plugin Files
-     * @param {*} param0 
+     * @param {*} res 
      * @param {*} page 
      * @param {*} obj 
      */
-    renderPlugin({
-        req = {},
-        res = {}
-    }, page, obj = {}) {
+    renderPlugin(
+        res,
+        page, 
+        obj = {}
+    ) {
         res.render(
             `plugins/${this.$theme}/${page}.njk`,
             obj
@@ -47,9 +49,10 @@ class Controller {
 
     /**
      * Render Json
+     * @param {*} res 
      * @param {*} obj 
      */
-    renderJson(obj)
+    renderJson(res, obj = {})
     {
         res.json(obj);
     }
