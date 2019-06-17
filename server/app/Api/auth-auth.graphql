@@ -1,0 +1,14 @@
+type Query {
+
+    """
+    Generates "Access Token" require 
+    "authorization private key" and 
+    "public key".
+    """
+    token: String!
+
+    """
+    Checks Token is valid or not
+    """
+    isValid(token: String!): Boolean!
+}   

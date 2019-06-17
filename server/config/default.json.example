@@ -1,0 +1,7 @@
+{
+    "url": "http://localhost:4111",
+    "port": 4111,
+    "debug": true,
+    // react, vue, es6, next, nuxt
+    "assets": "" 
+}

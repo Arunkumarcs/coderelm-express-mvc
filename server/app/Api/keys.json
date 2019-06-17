@@ -1,0 +1,14 @@
+{
+    "ajax_pr_xbgsdsjkkcxuvoidcasnscrfgrsdfhyyjtyu": {
+        "type": "ajax",
+        "publicKey": "ajax_pub_456768oyujhhgfgferehytukyjfhdcfcs"
+    },
+    "web_pr_xbgsdsjkkcxuvoidcasnscrfgrsdfhyyjtyu": {
+        "type": "web",
+        "publicKey": "web_pub_456768oyujhhgfgferehytukyjfhdcfcs"
+    },
+    "app_pr_xbgdfdfgssdsjkkcxuvoidcasnscrfgr": {
+        "type": "app",
+        "publicKey": "app_pub_456768oyujhhgfgferehytukyjfhsf23g"
+    }
+}
