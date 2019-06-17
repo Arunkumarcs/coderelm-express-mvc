@@ -68,25 +68,27 @@ class Api extends Middleware {
 
 // TODO: Implement Authendication
 // https://www.apollographql.com/docs/apollo-server/features/authentication
+// https://www.apollographql.com/docs/apollo-server/features/errors/
 Api.prototype.services = {
     auth: {
         typeDefs: BASE_PATH + '/app/Api/*-auth.graphql',
         resolvers: BASE_PATH + '/app/Api/*-auth.js',
-        context: (obj) => {
+        context: ({ req }) => {
             // get the user token from the headers
-            // const token = req.headers.authorization || '';
-           
-            // try to retrieve a user with the token
-            // const user = getUser(token);
-           
-            // add the user to the context
-            // throw new Error('you must be logged in'); 
-    
-            return { };
+            const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+            const privateKey = req.headers.authorization || '';
+            const publicKey  = req.headers.public_key || '';
+
+            return {
+                req,
+                ip,
+                privateKey,
+                publicKey
+            }
         },
         path: "/api/auth",
         options: {
-            introspection: false,
+            introspection: true,
             playground: false,
             cors: true
         },
@@ -94,7 +96,9 @@ Api.prototype.services = {
     api: {
         typeDefs: BASE_PATH + '/app/Api/Schema/*.graphql',
         resolvers: BASE_PATH + '/app/Api/Resolver/*.js',
-        context: (obj) => {
+        context: ({req}) => {
+            const token = req.headers.authorization || '';
+            const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
             // get the user token from the headers
             // const token = req.headers.authorization || '';
            
@@ -103,8 +107,16 @@ Api.prototype.services = {
            
             // add the user to the context
             // throw new Error('you must be logged in'); 
-    
-            return { };
+            // if(token == "") {
+            //     throw new AuthenticationError('Invalid Authorization Token.');
+            // } 
+            // jwtDec = jwt.decrypt(token, type);
+
+            return { 
+                req,
+                token,
+                ip
+            };
         },
         path: "/api",
         options: {

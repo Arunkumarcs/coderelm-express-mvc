@@ -13,7 +13,8 @@ class Welcome extends Controller {
         // Users = await Users.all();
 
         res.render('index.njk', {
-            title: 'Express'
+            title: 'Express',
+            session: req.session.test
         });
     }
 }

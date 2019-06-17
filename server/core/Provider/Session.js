@@ -1,5 +1,6 @@
 const sessionConfig = use('Config/Session');
 const {Provider} = use('Core/');
+const exSession = use('express-session');
 
 class Session extends Provider {
     boot(app) {
@@ -7,7 +8,6 @@ class Session extends Provider {
 
         // if session enabled
         if(sessionConfig.enabled) {
-            const exSession = use('express-session');
 
             // Session storage is enabled Setup
             if(sessionConfig.enableSessionStorage) {

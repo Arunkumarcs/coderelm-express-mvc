@@ -1,3 +1,10 @@
+"""
+Require Auth Token
+"""
 type Query {
+
+    """
+    Test For Query
+    """
     hello: String
 }   
