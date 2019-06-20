@@ -17,7 +17,7 @@
       "assets-es6": "cd src/es6 && yarn build",
       "assets-react": "cd src/react && yarn build",
       "assets-vue": "cd src/vue && yarn build",
-      "init": "cd server/ && yarn"
+      "initalize": "cd server/ && yarn"
     }
 }
   

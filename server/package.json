@@ -31,6 +31,7 @@
     "helmet": "^3.16.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
     "merge-graphql-schemas": "^1.5.8",
     "moment": "^2.24.0",
@@ -38,11 +39,11 @@
     "morgan": "~1.9.0",
     "mysql2": "^1.6.5",
     "nunjucks": "^3.2.0",
+    "request": "^2.88.0",
     "sequelize": "^5.8.5",
     "sequelize-cli": "^5.4.0",
     "session-file-store": "^1.2.0",
-    "socket.io": "^2.2.0",
-    "request": "^2.88.0"
+    "socket.io": "^2.2.0"
   },
   "keywords": [
     "MVC",
@@ -62,6 +63,7 @@
     "Socket": "app/Socket/",
     "Provider": "app/Provider/",
     "Config": "app/Config/",
+    "Api": "app/Api/",
     "App": "app/",
     "Core": "core/",
     "Public": "public/",
