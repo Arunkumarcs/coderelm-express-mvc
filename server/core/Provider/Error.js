@@ -1,6 +1,8 @@
 const { Provider } = use('Core/');
 const config = use('Config/App');
 const debug = use('debug')('coderelm-express:server');
+const createError = require('http-errors');
+
 class Error extends Provider {
     afterRoutes(app) {
         // catch 404 and forward to error handler
