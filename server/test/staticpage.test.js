@@ -39,3 +39,21 @@ test('testing browser', async() => {
  /**
   * Full Flow Test 
   */
+const App = require('../app')();
+const faker = require('faker');
+
+// console.log(await App());
+describe('Session CRUD', () => {
+    /**
+     * Unit Test Cases
+     */
+    test('create new session', async () => {
+        const sessionObj = use('Model/ApiSession');
+
+        let create = await sessionObj.create({
+            id: faker.random.uuid()
+        });
+        console.log(create);
+        expect(1+2).toBe(3);
+    });
+});
