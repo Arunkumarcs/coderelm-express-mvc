@@ -13,7 +13,7 @@
     "start-pm2": "pm2 start",
     "restart-pm2": "pm2 restart expCodeRelm",
     "stop-pm2": "pm2 stop expCodeRelm",
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest --detectOpenHandles"
   },
   "dependencies": {
     "@arunkumarcoderelm/use": "^1.0.1",
