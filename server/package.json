@@ -73,6 +73,7 @@
   "devDependencies": {
     "express-debug": "^1.1.1",
     "jest": "^24.7.1",
+    "jest-html-reporter": "^2.5.0",
     "puppeteer": "^1.16.0"
   }
 }
